@@ -1,0 +1,13 @@
+/*este es el codigo para establecer SATOSHI como la tipografia por defecto, extraido de fontshare
+https://www.fontshare.com/fonts/satoshi*/
+font-family: 'Satoshi', sans-serif;
+
+/*este es el codigo directamente extraido de google fonts para implementar WORK SANS como font family
+https://fonts.google.com/specimen/Work+Sans/ */
+
+.work-sans-<uniquifier> {
+    font-family: "Work Sans", serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+  } 
