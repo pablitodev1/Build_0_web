@@ -1,13 +1,321 @@
 /*este es el codigo para establecer SATOSHI como la tipografia por defecto, extraido de fontshare
 https://www.fontshare.com/fonts/satoshi*/
-font-family: 'Satoshi', sans-serif;
+body {
+  font-family: 'Satoshi', sans-serif;
+  background-color: #F2F2F2;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+footer {
+  background-color: #F2F2F2;
+  text-align: center;
+  margin-bottom: 5%;
+}
+
+.footer-logo {
+  height: 100px;
+  margin-top: 5%;
+}
 
 /*este es el codigo directamente extraido de google fonts para implementar WORK SANS como font family
 https://fonts.google.com/specimen/Work+Sans/ */
 
+/*
 .work-sans-<uniquifier> {
     font-family: "Work Sans", serif;
     font-optical-sizing: auto;
     font-weight: <weight>;
     font-style: normal;
-  } 
+  } */
+
+/* fondo */
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/Assets/Images/bg_placeholder.jpg'); /* Ruta de la imagen */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: -1;
+  filter: brightness(0.5);
+  animation: zoomIn 120s infinite linear; /* Duración de la animación */
+}
+/* Animacion del bg */
+@keyframes zoomIn {
+  0% {
+    background-size: 100%;
+  }
+  50% {
+    background-size: 200%;
+  }
+  100% {
+    background-size: 100%;
+  }
+}
+
+/* Lo primero que ve el usuario cuando entra a la pestaña */
+.inicio {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* nav temporal */
+nav {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  text-align: center;
+}
+
+
+/* Animacion inicial*/
+@keyframes dropFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Texto en la mitad de la pantalla */
+.servicios {
+  font-family: 'Satoshi', sans-serif;
+  color: white;
+  position: relative;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.servicios h1 {
+  opacity: 0;
+  align-items: center;
+  font-size: 60px;
+  margin: 0;
+  font-weight: 500;
+  animation: dropFadeIn 0.5s ease-out forwards;
+  animation-delay: 1s;
+}
+
+.linea {
+  opacity: 0;
+  width: 290px;
+  height: 1px;
+  background-color: white;
+  margin: 10px auto;
+  animation: dropFadeIn 0.5s ease-out forwards;
+  animation-delay: 1.5s;
+}
+
+.servicios p {
+  opacity: 0;
+  font-size: 40px;
+  font-weight: 300;
+  margin: 0;
+  animation: dropFadeIn 0.5s ease-out forwards;
+  animation-delay: 1.8s;
+}
+
+/* flecha que esta al fianl */
+.down_arrow {
+  position: absolute;
+  bottom: 20px; 
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 80px; 
+  color: white;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+/* segunda parte de la pagina */
+.info-servicios {
+  padding: 20px;
+  text-align: center;
+  background-color: #eaeaea;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+/* navbar de los servicios disponibles */
+.lista-servicios {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+  width: 100vw;
+  padding: 0;
+  margin: 0;
+}
+
+.lista-servicios ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.lista-servicios ul li {
+  flex: 1;
+  text-align: center;
+  margin: 10px 0;
+}
+
+.lista-servicios ul li a {
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+}
+
+/* secciones de la pagina */
+.secciones {
+  display: flex;
+  width: 100%;
+  height: 90vh; 
+}
+
+.seccion {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  text-align: center;
+}
+
+.seccion-adicional {
+  flex-direction: column;
+}
+
+/* Seccion izquierda */
+.izquierda {
+  color: white;
+  position: relative;
+  overflow: hidden;
+  height: 90vh;
+}
+
+.bg-img-izq {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/Assets/Images/izq_placeholder.jpg'); /* Ruta de la imagen */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: brightness(0.5);
+}
+
+.content-container {
+  position: relative;
+  z-index: 1; 
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; 
+  margin-left: 20%; 
+  margin-right: 20%; 
+}
+
+.izquierda h1 p, .linea-2 {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.izquierda h1 {
+  text-align: start;
+  font-family: 'Satoshi', sans-serif;
+  font-size: 70px;
+  font-weight: lighter;
+  margin-bottom: 0;
+  max-width: 70%;
+  word-wrap: break-word;
+  line-height: 1;
+}
+
+.linea-2 {
+  width: 70%;
+  height: 1px;
+  background-color: white;
+  margin: 10px 0;
+}
+
+.izquierda p {
+  font-family: 'Work Sans', sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  text-align: justify;
+  line-height: 1.6;
+}
+
+/* Seccion derecha */
+.derecha {
+  background-color: white; 
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  height: 90vh;
+}
+
+.bg-img-der {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/Assets/Images/izq_placeholder.jpg'); /* Ruta de la imagen */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: brightness(0.5);
+  z-index: 1;
+}
+
+.derecha ul {
+  position: relative;
+  z-index: 2;
+}
+
+.derecha ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+  padding: 0;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  list-style: none;
+}
+
+.derecha li {
+  font-family: 'Work Sans', sans-serif;
+  font-size: xx-large;
+  font-weight: bold;
+  text-decoration: none;
+  list-style: none;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
