@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Esto es un link para fontawesome, biblioteca de iconos-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!--Link a fontshare para tipografia SATOSHI-->
     <link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,301,400,401,500,501,700,701,900,901&display=swap" rel="stylesheet">
@@ -15,36 +17,85 @@
     <!--Link CSS-->
     <link rel="stylesheet" href="/Assets/CSS/style.css">
 
-    <!--Link JS-->
-    <script src="/Assets/JS/script.js"></script>
-    
-    <title>Nuestra historia</title>
+    <title>Balada Consultores, consultora boutique</title>
 </head>
 <body>
-    <nav>
-        
-        <label for="logo"></label>
+    
+    <header>
 
-        <ul>
-            <li>
-                <a href="#">Inicio</a>
+        <div class="header-bg"></div> <!-- esto es la imagen BG del header, reemplazable en el CSS-->
+
+    <nav class="navbar">
+        
+        <a href="index.html" class="logo-navbar"><img src="/Assets/Images/Logo_Balada_blanco.png" alt="Logo Balada"></a>
+
+        <ul class="nav-menu">
+            <li class="nav-item">
+                <a href="index.html" class="nav-link">Inicio</a>
             </li>
-            <li>
-                <a href="#">Servicios</a>
+            <li class="nav-item">
+                <a href="Servicios.html" class="nav-link">Servicios</a>
             </li>
-            <li>
-                <a href="#">Nosotros</a>
+            <li class="nav-item">
+                <a href="Nosotros.html" class="nav-link">Nosotros</a>
             </li>
-            <li>
-                <a href="#">Historia</a>
+            <li class="nav-item">
+                <a href="Historia.html" class="nav-link">Historia</a>
             </li>
-            <li>
-                <a href="#">Contacto</a>
+            <li class="nav-item">
+                <a href="Contacto.html" class="nav-link">Contacto</a>
             </li>
         </ul>
 
-    </nav>
+        <div class="filler-navbar"></div>
 
-    
+        <div class="burger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
+    </nav>
+        <div class="Indicador-seccion">
+            <h1 class="Titulo-seccion">Nuestra Historia</h1>
+            <div class="Linea"></div>
+            <p class="Subtitulo-seccion">Ocho décadas de crecimiento y confianza</p>
+        </div>
+   
+    <div class="btn-container">   
+        <a href="#newsection" class="down-btn">
+            <img src="/Assets/Images/Flecha_Down.png" alt="Flecha indicando para lado inferior de la pagina">
+        </a> 
+    </div> 
+        
+    </header>
+
+   <div class="placeholder" id="newsection"></div>
+   
+   
+   <script>
+    //Script JS para menu responsivo, se mantiene en body para evitar conflictos con JS linkeado//
+    const burger = document.querySelector(".burger");
+    const navMenu = document.querySelector(".nav-menu");
+
+        burger.addEventListener("click", mobileMenu);
+
+    function mobileMenu() {
+        burger.classList.toggle("active");
+        navMenu.classList.toggle("active"); 
+    }
+
+    // Al cliquear la X se cierra icono hamburguesa
+
+    const navLink = document.querySelectorAll(".nav-link");
+
+        navLink.forEach(n => n.addEventListener("click", closeMenu));
+
+    function closeMenu() {
+        burger.classList.remove("active");
+        navMenu.classList.remove("active");
+    }
+   </script>
+
 </body>
 </html>

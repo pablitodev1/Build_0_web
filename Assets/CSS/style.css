@@ -1,13 +1,269 @@
-/*este es el codigo para establecer SATOSHI como la tipografia por defecto, extraido de fontshare
-https://www.fontshare.com/fonts/satoshi*/
-font-family: 'Satoshi', sans-serif;
+/* SECCION DE RESETO DE CSS, elimina codigo involuntario de ciertos navegadores y dispositivos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-/*este es el codigo directamente extraido de google fonts para implementar WORK SANS como font family
-https://fonts.google.com/specimen/Work+Sans/ */
+html {
+  font-size: 10px; /*esto establece el tamano de fuente universal, utililizar REM para medidas de fuentes*/
+  scroll-behavior: smooth;
+}
 
-.work-sans-<uniquifier> {
-    font-family: "Work Sans", serif;
-    font-optical-sizing: auto;
-    font-weight: <weight>;
-    font-style: normal;
-  } 
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+/* fin de reset de estilos */
+
+/*HEADER incluye navbar, imagen de fondo, indicador de seccion {titulo, linea y subtitulo} e imagen tipo flecha boton */
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.header-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url(/Assets/Images/Header_BG_60_v2.jpg) center/cover no-repeat;
+  animation: zoomBackground 60s ease;
+  z-index: -1; 
+}
+
+/* animaciones para el fondo de header */
+@keyframes zoomBackground {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.5);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+ }
+
+.navbar {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.logo-navbar img {
+  width: 50px; /*tamano logo navbar*/
+}
+
+.burger {
+  display: none; /*oculta menu burger movil en desktop*/
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #fff;
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-link {
+  color: #fff;
+  font-family: 'Satoshi', sans-serif;
+  font-size: 1.5rem;
+  padding: 5px 20px;
+  margin-left: 5px;
+  margin-right: 5px;
+  transition: all .3s ease;
+}
+
+.nav-link:hover {
+  color: rgb(0, 0, 0);
+  background-color: #fff;
+  transition: all .3s ease;
+}
+
+.filler-navbar { 
+  width: 3%;/*esto es un div invisible, que ayuda a centrar el navbar sin intervenir el resto del codigo, el width queda en porcentaje para garantizar buena posicion en cualquier pantalla*/
+}
+
+.Indicador-seccion-index { /*clase unica para INDEX, unica diferencia es cantidad de padding bottom para compensar por BR en subtitulo de seccion*/
+  width: 100%;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 0.8%; /*esto se agrega para compenzar y dejar la LINEA en el horizonte de la imagen en DESKTOP, irrelevante para mobil*/
+  gap: 10px;
+  text-align: center;
+}
+
+.Indicador-seccion {
+  width: 100%;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 2.5%; /*esto se agrega para compenzar y dejar la LINEA en el horizonte de la imagen en DESKTOP, irrelevante para mobil*/
+  gap: 10px;
+  text-align: center;
+}
+
+.Titulo-seccion {
+  font-family: 'Satoshi', sans-serif;
+  color: #ffffff;
+  font-size: 5rem;
+  line-height: 5rem;
+  font-weight: 600;
+  opacity: 0;
+  animation: fadeDown 0.8s ease forwards;
+}
+
+.Linea {
+  width: 200px;
+  height: 1px;
+  opacity: 0;
+  background-color: rgb(255, 255, 255);
+  animation: fadeDown 0.8s ease 0.2s forwards; /*duracion de dropdown con delay de 0.2s*/
+}
+
+.Subtitulo-seccion {
+  font-family: 'Satoshi', sans-serif;
+  color: #ffffff;
+  font-size: 3rem;
+  line-height: 3rem;
+  font-weight: 300;
+  opacity: 0;
+  animation: fadeDown 0.8s ease 0.4s forwards; /*duracion de dropdown con delay de 0.4s*/
+}
+
+@keyframes fadeDown { /*animacion para seccion de Titulo */
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+ }
+
+ 
+.btn-container { /*boton para ir a seccion ID, destino se cambia con ID en html*/
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.down-btn {
+  cursor: pointer;
+}
+
+.down-btn img {
+  width: 35px;
+  scale: 1;
+  transition: all .3s ease;
+}
+
+.down-btn img:hover {
+  scale: 1.5;
+  transition: all .3s ease;
+}
+
+.placeholder {
+  width: 100%;
+  height: 900px;
+}
+/*Fin boton de seccion*/
+
+@media only screen and (max-width: 650px) {
+
+  /*SECCION NAVBAR REPONSIVA */
+  .nav-menu {
+      position: fixed;
+      left: -100%;
+      top: 7rem;
+      flex-direction: column;
+      background-color: #2f2f2f;
+      width: 100%;
+      text-align: center;
+      transition: 0.3s;
+      z-index: 1;
+  }
+
+  .nav-menu.active {
+      left: 0;
+  }
+
+  .nav-item {
+      width: 100%;
+      padding-top: 30px;
+      padding-bottom: 30px;
+      border-top: 1px solid #808080;
+      border-bottom: 1px solid #808080;
+  }
+
+  .nav-link:hover {
+      color: #ffffff;
+      background-color: #2f2f2f;
+      transition: all .3s ease;
+  }
+
+  .burger {
+      display: block;
+      cursor: pointer;
+  }
+
+  .burger.active .bar:nth-child(2) {
+      opacity: 0;
+  }
+
+  .burger.active .bar:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+  }
+
+  .burger.active .bar:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .Titulo-seccion {
+    margin-left: 5px;
+    margin-right: 5px;
+    font-size: 4rem;
+    line-height: 4rem;
+  }
+  
+  .Linea {
+    width: 200px;
+    height: 1px;
+  }
+  
+  .Subtitulo-seccion {
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+}
+/* Fin seccion Header*/
