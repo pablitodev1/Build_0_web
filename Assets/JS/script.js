@@ -1,20 +1,5 @@
-// Función para animar la flecha cuando el usuario la clickea
-document.addEventListener('DOMContentLoaded', function() {
-  const arrow = document.querySelector('.down_arrow');
-  const listItems = document.querySelectorAll('.lista-servicios ul li a');
-
-  arrow.addEventListener('click', function() {
-    arrow.style.transform = 'translateX(-50%) scale(1.4)';
-    setTimeout(() => {
-      arrow.style.transform = 'translateX(-50%) scale(1)';
-      // Mover la pantalla hacia la sección de servicios
-      const section = document.getElementById('info-servicios');
-      section.scrollIntoView({ behavior: 'smooth' });
-    }, 300);
-    
-  });
-
-  // Mostrar contenido de la primera opción por defecto
+//CODIGO DE SEBA//
+// Mostrar contenido de la primera opción por defecto
   showContent(1);
 
   // Agregar event listeners para hover en los enlaces de la lista de servicios
@@ -325,3 +310,5 @@ function showContent(index) {
     }
   }
 }
+//FIN CODIGO SEBA//
+
