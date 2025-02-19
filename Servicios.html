@@ -68,15 +68,12 @@
         </div>
    
     <div class="btn-container">   
-        <a href="#newsection" class="down-btn">
+        <a href="#info-servicios" class="down-btn">
             <img src="/Assets/Images/Flecha_Down.png" alt="Flecha indicando para lado inferior de la pagina">
         </a> 
     </div> 
         
-    </header>
-
-   <div class="placeholder" id="newsection"></div>
-    
+    </header>   
    
    <script>
     //Script JS para menu responsivo, se mantiene en body para evitar conflictos con JS linkeado//
@@ -108,17 +105,150 @@
     <div class="info-servicios" id="info-servicios">
         <!-- Listado de servicios -->
         <div class="lista-servicios">
-            <ul>
-                <li><a href="javascript:void(0);" onclick="showContent(1)">Tax Planning</a></li>
-                <li><a href="javascript:void(0);" onclick="showContent(2)">Estrategia y Finanzas</a></li>
-                <li><a href="javascript:void(0);" onclick="showContent(3)">Legal Corporativo</a></li>
-                <li><a href="javascript:void(0);" onclick="showContent(4)">Defensa Judicial y Tributaria</a></li>
-                <li><a href="javascript:void(0);" onclick="showContent(5)">Contabilidad</a></li>
-            </ul>
+            <button class="tablinks" onclick="openSection(event,1)" id="defaultOpen">Tax Planning</button>
+            <button class="tablinks" onclick="openSection(event,2)">Estrategia y Finanzas</button>
+            <button class="tablinks" onclick="openSection(event,3)">Legal Corporativo</button>
+            <button class="tablinks" onclick="openSection(event,4)">Defensa Judicial y Tributaria</button>
+            <button class="tablinks" onclick="openSection(event,5)">Contabilidad</button>
         </div>
+
         <!-- Secciones de cada listado -->
-        <div class="secciones" id="dynamic-content">
-            <!-- El contenido se agregara dinamicamente -->
+        <!-- Seccion de Tax Planning -->
+        <div class="secciones" id="1">
+            <div class="seccion-izq">
+                <div class="bg-img-izq"></div>
+                <h1>Tax Planning</h1>
+                <div class="line"></div>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia culpa laudantium voluptatibus. Molestias voluptatibus quis provident minus ipsa numquam itaque repellendus tempore sapiente maiores vitae rem, atque officia a aliquam.</p>
+            </div>
+
+            <div class="seccion-der">
+                <h1>Servicio 1</h1>
+                <h1>Servicio 2</h1>
+                <h1>Servicio 3</h1>
+                <h1>Servicio 4</h1>
+                <h1>Servicio 5</h1>
+                <h1>Servicio 6</h1>
+                <h1>Servicio 7</h1>
+            </div>
+        </div>
+
+        <!-- Seccion de Estrategia y finanzas -->
+        <div class="secciones" id="2" style="flex-direction: column;">
+            <div class="content-block">
+                <div class="seccion-izq">
+                    <div class="bg-img-izq"></div>
+                    <h1>Estrategia Corporativa</h1>
+                    <div class="line"></div>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia culpa laudantium voluptatibus. Molestias voluptatibus quis provident minus ipsa numquam itaque repellendus tempore sapiente maiores vitae rem, atque officia a aliquam.</p>
+                </div>
+    
+                <div class="seccion-der">
+                    <h1>Servicio 1</h1>
+                    <h1>Servicio 2</h1>
+                    <h1>Servicio 3</h1>
+                    <h1>Servicio 4</h1>
+                    <h1>Servicio 5</h1>
+                    <h1>Servicio 6</h1>
+                    <h1>Servicio 7</h1>
+                </div>
+            </div>
+            <div class="content-block">
+                <div class="seccion-izq">
+                    <h1 style="color: black;">Estrategia Financiera</h1>
+                    <div class="line" style="background-color: black;"></div>
+                    <p style="color: black;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia culpa laudantium voluptatibus. Molestias voluptatibus quis provident minus ipsa numquam itaque repellendus tempore sapiente maiores vitae rem, atque officia a aliquam.</p>
+                </div>
+    
+                <div class="seccion-der" style="color: white;">
+                    <div class="bg-img-izq"></div>
+                    <h1>Servicio 1</h1>
+                    <h1>Servicio 2</h1>
+                    <h1>Servicio 3</h1>
+                    <h1>Servicio 4</h1>
+                    <h1>Servicio 5</h1>
+                    <h1>Servicio 6</h1>
+                    <h1>Servicio 7</h1>
+                </div>
+            </div>
+            <div class="content-block">
+                <div class="seccion-izq">
+                    <div class="bg-img-izq"></div>
+                    <h1>Finanzas</h1>
+                    <div class="line"></div>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia culpa laudantium voluptatibus. Molestias voluptatibus quis provident minus ipsa numquam itaque repellendus tempore sapiente maiores vitae rem, atque officia a aliquam.</p>
+                </div>
+    
+                <div class="seccion-der">
+                    <h1>Servicio 1</h1>
+                    <h1>Servicio 2</h1>
+                    <h1>Servicio 3</h1>
+                    <h1>Servicio 4</h1>
+                    <h1>Servicio 5</h1>
+                    <h1>Servicio 6</h1>
+                    <h1>Servicio 7</h1>
+                </div>
+            </div>
+        </div>
+
+        <!-- Seccion de Legal Corporativo -->
+        <div class="secciones" id="3">
+            <div class="seccion-izq">
+                <div class="bg-img-izq"></div>
+                <h1>Legal Corporativo</h1>
+                <div class="line"></div>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia culpa laudantium voluptatibus. Molestias voluptatibus quis provident minus ipsa numquam itaque repellendus tempore sapiente maiores vitae rem, atque officia a aliquam.</p>
+            </div>
+
+            <div class="seccion-der">
+                <h1>Servicio 1</h1>
+                <h1>Servicio 2</h1>
+                <h1>Servicio 3</h1>
+                <h1>Servicio 4</h1>
+                <h1>Servicio 5</h1>
+                <h1>Servicio 6</h1>
+                <h1>Servicio 7</h1>
+            </div>
+        </div>
+
+        <!-- Seccion de Defensa judicial y tributaria -->
+        <div class="secciones" id="4">
+            <div class="seccion-izq">
+                <div class="bg-img-izq"></div>
+                <h1>Defensa Judicial y Tributaria</h1>
+                <div class="line"></div>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia culpa laudantium voluptatibus. Molestias voluptatibus quis provident minus ipsa numquam itaque repellendus tempore sapiente maiores vitae rem, atque officia a aliquam.</p>
+            </div>
+
+            <div class="seccion-der">
+                <h1>Servicio 1</h1>
+                <h1>Servicio 2</h1>
+                <h1>Servicio 3</h1>
+                <h1>Servicio 4</h1>
+                <h1>Servicio 5</h1>
+                <h1>Servicio 6</h1>
+                <h1>Servicio 7</h1>
+            </div>
+        </div>
+
+        <!-- Seccion de Contabilidad -->
+        <div class="secciones" id="5">
+            <div class="seccion-izq">
+                <div class="bg-img-izq"></div>
+                <h1>Contabilidad</h1>
+                <div class="line"></div>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia culpa laudantium voluptatibus. Molestias voluptatibus quis provident minus ipsa numquam itaque repellendus tempore sapiente maiores vitae rem, atque officia a aliquam.</p>
+            </div>
+
+            <div class="seccion-der">
+                <h1>Servicio 1</h1>
+                <h1>Servicio 2</h1>
+                <h1>Servicio 3</h1>
+                <h1>Servicio 4</h1>
+                <h1>Servicio 5</h1>
+                <h1>Servicio 6</h1>
+                <h1>Servicio 7</h1>
+            </div>
         </div>
     </div>
     

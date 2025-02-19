@@ -54,7 +54,7 @@ header {
   100% {
     transform: scale(1);
   }
- }
+}
 
 .navbar {
   display: flex;
@@ -168,7 +168,7 @@ header {
     opacity: 1;
     transform: translateY(0);
   }
- }
+}
 
 .btn-container { /*boton para ir a seccion ID, destino se cambia con ID en html*/
   width: 100%;
@@ -264,6 +264,15 @@ header {
     font-size: 2rem;
     line-height: 2rem;
   }
+
+  /* Transformar las secciones a columnas */
+  .secciones {
+    flex-direction: column;
+  }
+
+  .seccion-izq .seccion-der {
+    width: 100%;
+  }
 }
 /* Fin seccion Header - CODIGO DE PABLO*/
 
@@ -271,20 +280,23 @@ header {
 footer {
   background-color: #F2F2F2;
   text-align: center;
-  margin-bottom: 5%;
+  justify-content: center;
+  padding-bottom: 5%;
+  font-size: 2rem;
 }
 
 .footer-logo {
-  height: 100px;
+  height: 10rem;
   margin-top: 5%;
+  margin-bottom: 1%;
 }
 
 /* segunda parte de la pagina */
 .info-servicios {
-  padding: 20px;
+  padding: 2rem; 
   text-align: center;
   background-color: #eaeaea;
-  height: 100vh;
+  height: auto;
   margin: 0;
   padding: 0;
 }
@@ -292,65 +304,67 @@ footer {
 /* navbar de los servicios disponibles */
 .lista-servicios {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   height: 10vh;
   width: 100vw;
   padding: 0;
   margin: 0;
+  background-color: #E5E5E5;
 }
 
-.lista-servicios ul {
-  display: flex;
-  justify-content: space-around;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  width: 100%;
-}
-
-.lista-servicios ul li {
-  flex: 1;
-  text-align: center;
-  margin: 10px 0;
-}
-
-.lista-servicios ul li a {
-  text-decoration: none;
+.lista-servicios button {
+  font-family: 'Satoshi', sans-serif;
   color: black;
-  font-size: 20px;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  background-color: #E5E5E5;
+}
+
+.lista-servicios button:hover {
+  font-weight: bold;
+  text-decoration: underline;
+  background-color: transparent;
+}
+
+.lista-servicios button.active {
+  font-weight: bold;
+  text-decoration: underline;
+  background-color: transparent;
+}
+
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
 }
 
 /* secciones de la pagina */
 .secciones {
   display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: stretch;
   width: 100%;
-  height: 90vh; 
+  height: auto;
+  animation: fadeEffect 1.5s;
 }
 
-.seccion {
-  flex: 1;
+/* seccion izquierda */
+.seccion-izq {
   display: flex;
+  flex: 1;
+  width: 50%;
+  height: 90vh;
   flex-direction: column;
   justify-content: center;
-  align-items: start;
-  text-align: center;
-}
-
-.seccion-adicional {
-  flex-direction: column;
-}
-
-/* Seccion izquierda */
-.izquierda {
-  color: white;
   position: relative;
-  overflow: hidden;
-  height: 90vh;
+  overflow: hidden; 
+  z-index: 1;
 }
 
+/* imagen de fondo de la seccion izquierda */
 .bg-img-izq {
-  content: '';
   position: absolute;
   top: 0;
   left: 0;
@@ -360,100 +374,58 @@ footer {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  background-blend-mode: difference;
   filter: brightness(0.5);
+  z-index: -1;
 }
 
-.content-container {
-  position: relative;
-  z-index: 1; 
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start; 
-  margin-left: 20%; 
-  margin-right: 20%; 
-}
-
-.izquierda h1 p, .linea-2 {
-  margin-left: 0;
-  margin-right: 0;
-}
-
-.izquierda h1 {
-  text-align: start;
+.seccion-izq h1 {
   font-family: 'Satoshi', sans-serif;
-  font-size: 70px;
-  font-weight: lighter;
-  margin-bottom: 0;
-  max-width: 70%;
-  word-wrap: break-word;
-  line-height: 1;
+  font-size: 6rem;
+  text-align: start;
+  margin-left: 25%;
+  margin-right: 25%;
+  color: white;
 }
 
-.linea-2 {
-  width: 70%;
+.line {
   height: 1px;
+  width: 38rem;
   background-color: white;
-  margin: 10px 0;
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-top: 0.6rem;
+  margin-bottom: 0.7rem;
 }
 
-.izquierda p {
-  font-family: 'Work Sans', sans-serif;
-  font-size: medium;
-  font-weight: bold;
-  text-align: justify;
+.seccion-izq p {
+  font-family: 'work-sans', sans-serif;
+  font-size: 2rem;
+  margin-left: 25%;
+  margin-right: 20%;
   line-height: 1.6;
+  text-align: start;
+  color: white;
 }
 
-/* Seccion derecha */
-.derecha {
-  background-color: white; 
-  align-items: center;
-  position: relative;
-  overflow: hidden;
+/* seccion derecha */
+.seccion-der {
+  flex: 1;
+  display: flex;
+  width: 50%;
   height: 90vh;
-}
-
-.bg-img-der {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url('/Assets/Images/izq_placeholder.jpg'); /* Ruta de la imagen */
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  filter: brightness(0.5);
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 1.5rem;
+  font-family: 'Satoshi', sans-serif;
+  position: relative;
+  overflow: hidden; 
   z-index: 1;
 }
 
-.derecha ul {
-  position: relative;
-  z-index: 2;
-}
-
-.derecha ul {
+.content-block {
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  height: 100%;
-  padding: 0;
-  margin-top: 5%;
-  margin-bottom: 5%;
-  list-style: none;
-}
-
-.derecha li {
-  font-family: 'Work Sans', sans-serif;
-  font-size: xx-large;
-  font-weight: bold;
-  text-decoration: none;
-  list-style: none;
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: row;
   width: 100%;
 }
