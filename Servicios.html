@@ -68,7 +68,7 @@
         </div>
    
     <div class="btn-container">   
-        <a href="#info-servicios" class="down-btn">
+        <a href="#lista-servicios" class="down-btn">
             <img src="/Assets/Images/Flecha_Down.png" alt="Flecha indicando para lado inferior de la pagina">
         </a> 
     </div> 
@@ -101,20 +101,19 @@
  <!-- FIN CODIGO SECCION PABLO -->
 
  <!-- INICIO CODIGO SEBA -->
+  <!-- Listado de servicios -->
+    <div class="lista-servicios" id="lista-servicios">
+        <button class="tablinks" data-tab="tax" onclick="openSection(event,1)" id="defaultOpen">Tax Planning</button>
+        <button class="tablinks" data-tab="estrategia" onclick="openSection(event,2)">Estrategia y Finanzas</button>
+        <button class="tablinks" data-tab="legal" onclick="openSection(event,3)">Legal Corporativo</button>
+        <button class="tablinks" data-tab="defensa" onclick="openSection(event,4)">Defensa Judicial y Tributaria</button>
+        <button class="tablinks" data-tab="contabilidad" onclick="openSection(event,5)">Contabilidad</button>
+    </div>
     <!-- Contenedor de información de servicios -->
     <div class="info-servicios" id="info-servicios">
-        <!-- Listado de servicios -->
-        <div class="lista-servicios">
-            <button class="tablinks" onclick="openSection(event,1)" id="defaultOpen">Tax Planning</button>
-            <button class="tablinks" onclick="openSection(event,2)">Estrategia y Finanzas</button>
-            <button class="tablinks" onclick="openSection(event,3)">Legal Corporativo</button>
-            <button class="tablinks" onclick="openSection(event,4)">Defensa Judicial y Tributaria</button>
-            <button class="tablinks" onclick="openSection(event,5)">Contabilidad</button>
-        </div>
-
         <!-- Secciones de cada listado -->
         <!-- Seccion de Tax Planning -->
-        <div class="secciones" id="1">
+        <div class="secciones" id="1" data-tab="tax">
             <div class="seccion-izq">
                 <div class="bg-img-izq"></div>
                 <h1>Tax Planning</h1>
@@ -134,7 +133,7 @@
         </div>
 
         <!-- Seccion de Estrategia y finanzas -->
-        <div class="secciones" id="2" style="flex-direction: column;">
+        <div class="secciones" id="2" style="flex-direction: column;" data-tab="estrategia">
             <div class="content-block">
                 <div class="seccion-izq">
                     <div class="bg-img-izq"></div>
@@ -192,7 +191,7 @@
         </div>
 
         <!-- Seccion de Legal Corporativo -->
-        <div class="secciones" id="3">
+        <div class="secciones" id="3" data-tab="legal">
             <div class="seccion-izq">
                 <div class="bg-img-izq"></div>
                 <h1>Legal Corporativo</h1>
@@ -212,7 +211,7 @@
         </div>
 
         <!-- Seccion de Defensa judicial y tributaria -->
-        <div class="secciones" id="4">
+        <div class="secciones" id="4" data-tab="defensa">
             <div class="seccion-izq">
                 <div class="bg-img-izq"></div>
                 <h1>Defensa Judicial y Tributaria</h1>
@@ -232,7 +231,7 @@
         </div>
 
         <!-- Seccion de Contabilidad -->
-        <div class="secciones" id="5">
+        <div class="secciones" id="5" data-tab="contabilidad">
             <div class="seccion-izq">
                 <div class="bg-img-izq"></div>
                 <h1>Contabilidad</h1>
@@ -262,6 +261,47 @@
             +569 7516 7649 | contacto@baladaglobal.com | Código postal: 7550202 </h2>
     </footer>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+
+    $(document).ready(function(){
+
+    let switching = true;
+    const defaultOpen = "tax";
+
+    $(".secciones").hide();
+
+    $("button[data-tab='" + defaultOpen + "']").addClass("active");
+    $("div[data-tab='" + defaultOpen + "']").fadeIn(400, function(){
+        $(this).addClass("active");
+        switching = false;
+    });
+
+
+    $(".tablinks").click(function(){
+        const switchToAttr = $(this).attr("data-tab");
+        const switchTo = $("div[data-tab='" + switchToAttr + "']");
+        const prevDiv = $(".secciones.active");
+
+        if(!switching && switchToAttr != prevDiv.attr("data-tab")){
+            switching = true;
+
+            $("button.active").removeClass("active");
+            prevDiv.removeClass("active");
+
+            $(this).addClass("active");
+            switchTo.addClass("active");
+
+            prevDiv.fadeOut(400, function(){
+                switchTo.fadeIn(400);
+                switching = false;
+            });
+        }
+    });
+
+    });
+
+    </script>
 
 </body>
 </html>

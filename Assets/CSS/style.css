@@ -197,83 +197,6 @@ header {
   height: 900px;
 }
 /*Fin boton de seccion*/
-
-@media only screen and (max-width: 650px) {
-
-  /*SECCION NAVBAR REPONSIVA */
-  .nav-menu {
-      position: fixed;
-      left: -100%;
-      top: 7rem;
-      flex-direction: column;
-      background-color: #2f2f2f;
-      width: 100%;
-      text-align: center;
-      transition: 0.3s;
-      z-index: 1;
-  }
-
-  .nav-menu.active {
-      left: 0;
-  }
-
-  .nav-item {
-      width: 100%;
-      padding-top: 30px;
-      padding-bottom: 30px;
-      border-top: 1px solid #808080;
-      border-bottom: 1px solid #808080;
-  }
-
-  .nav-link:hover {
-      color: #ffffff;
-      background-color: #2f2f2f;
-      transition: all .3s ease;
-  }
-
-  .burger {
-      display: block;
-      cursor: pointer;
-  }
-
-  .burger.active .bar:nth-child(2) {
-      opacity: 0;
-  }
-
-  .burger.active .bar:nth-child(1) {
-      transform: translateY(8px) rotate(45deg);
-  }
-
-  .burger.active .bar:nth-child(3) {
-      transform: translateY(-8px) rotate(-45deg);
-  }
-
-  .Titulo-seccion {
-    margin-left: 5px;
-    margin-right: 5px;
-    font-size: 4rem;
-    line-height: 4rem;
-  }
-  
-  .Linea {
-    width: 200px;
-    height: 1px;
-  }
-  
-  .Subtitulo-seccion {
-    font-size: 2rem;
-    line-height: 2rem;
-  }
-
-  /* Transformar las secciones a columnas */
-  .secciones {
-    flex-direction: column;
-  }
-
-  .seccion-izq .seccion-der {
-    width: 100%;
-  }
-}
 /* Fin seccion Header - CODIGO DE PABLO*/
 
 /* Seccion Servicios  - CODIGO DE SEBA */
@@ -324,19 +247,12 @@ footer {
 
 .lista-servicios button:hover {
   font-weight: bold;
-  text-decoration: underline;
   background-color: transparent;
 }
 
 .lista-servicios button.active {
   font-weight: bold;
-  text-decoration: underline;
   background-color: transparent;
-}
-
-@keyframes fadeEffect {
-  from {opacity: 0;}
-  to {opacity: 1;}
 }
 
 /* secciones de la pagina */
@@ -347,7 +263,6 @@ footer {
   align-items: stretch;
   width: 100%;
   height: auto;
-  animation: fadeEffect 1.5s;
 }
 
 /* seccion izquierda */
@@ -428,4 +343,81 @@ footer {
   display: flex;
   flex-direction: row;
   width: 100%;
+}
+
+@media only screen and (max-width: 750px) {
+
+  /*SECCION NAVBAR REPONSIVA */
+  .nav-menu {
+      position: fixed;
+      left: -100%;
+      top: 7rem;
+      flex-direction: column;
+      background-color: #2f2f2f;
+      width: 100%;
+      text-align: center;
+      transition: 0.3s;
+      z-index: 1;
+  }
+
+  .nav-menu.active {
+      left: 0;
+  }
+
+  .nav-item {
+      width: 100%;
+      padding-top: 30px;
+      padding-bottom: 30px;
+      border-top: 1px solid #808080;
+      border-bottom: 1px solid #808080;
+  }
+
+  .nav-link:hover {
+      color: #ffffff;
+      background-color: #2f2f2f;
+      transition: all .3s ease;
+  }
+
+  .burger {
+      display: block;
+      cursor: pointer;
+  }
+
+  .burger.active .bar:nth-child(2) {
+      opacity: 0;
+  }
+
+  .burger.active .bar:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+  }
+
+  .burger.active .bar:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .Titulo-seccion {
+    margin-left: 5px;
+    margin-right: 5px;
+    font-size: 4rem;
+    line-height: 4rem;
+  }
+  
+  .Linea {
+    width: 200px;
+    height: 1px;
+  }
+  
+  .Subtitulo-seccion {
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+
+  /* Transformar las secciones a columnas */
+  .secciones {
+    flex-direction: column;
+  }
+
+  .seccion-izq .seccion-der {
+    width: 100%;
+  }
 }
