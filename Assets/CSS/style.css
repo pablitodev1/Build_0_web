@@ -305,7 +305,7 @@ footer {
 
 .line {
   height: 1px;
-  width: 38rem;
+  width: 36rem;
   background-color: white;
   margin-left: 25%;
   margin-right: 25%;
@@ -344,6 +344,48 @@ footer {
   flex-direction: row;
   width: 100%;
 }
+
+
+@media only screen and (max-width: 1100px) {
+  .seccion-izq {
+    width: 65%;
+    flex: 0 0 65%;
+    padding: 30px;
+  }
+
+  .seccion-der {
+      width: 35%;
+      flex: 0 0 35%;
+      padding: 30px;
+  }
+
+  .seccion-izq h1 {
+      font-size: 5.2rem;
+      margin: 15px 10%;
+  }
+
+  .seccion-izq p {
+      font-size: 2rem;
+      margin: 10px 10%;
+      line-height: 1.5;
+  }
+
+  .line {
+      width: 35rem;
+      margin: 10px 10%;
+  }
+
+  .lista-servicios {
+      height: auto;
+      padding: 15px 0;
+  }
+
+  .lista-servicios button {
+      font-size: 2rem;
+      padding: 10px;
+  }
+}
+
 
 @media only screen and (max-width: 750px) {
 
@@ -412,12 +454,46 @@ footer {
     line-height: 2rem;
   }
 
-  /* Transformar las secciones a columnas */
+  /*SECCION SERVICIOS RESPONSIVA */
   .secciones {
-    flex-direction: column;
+    min-height: 100vh;
   }
 
-  .seccion-izq .seccion-der {
-    width: 100%;
+  .seccion-izq {
+    width: 65%;
+    flex: 0 0 65%;
+    padding: 20px;
+  }
+
+  .seccion-der {
+      width: 35%;
+      flex: 0 0 35%;
+      padding: 20px; 
+  }
+
+  .seccion-izq h1 {
+      font-size: 5rem;
+      margin: 15px 15%;
+  }
+
+  .seccion-izq p {
+      font-size: 1.8rem;
+      margin: 10px 15%;
+      line-height: 1.4;
+  }
+
+  .line {
+      width: 70%;
+      margin: 10px 15%;
+  }
+
+  .lista-servicios {
+      padding: 10px 0;
+      height: auto;
+  }
+
+  .lista-servicios button {
+      padding: 10px;
+      font-size: 1.6rem;
   }
 }
