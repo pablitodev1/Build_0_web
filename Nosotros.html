@@ -18,7 +18,10 @@
     <link rel="stylesheet" href="/Assets/CSS/style.css">
 
     <!--Link JS-->
-    <script src="/Assets/JS/script.js"></script>
+    <script src="/Assets/JS/script.js" defer></script>
+
+     <!--AOS Library / animaciones basicas-->
+     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
 
     <title>Balada Consultores, consultora boutique</title>
 </head>
@@ -66,15 +69,29 @@
         </div>
    
     <div class="btn-container">   
-        <a href="#newsection" class="down-btn">
+        <a href="#nosotros-1" class="down-btn">
             <img src="/Assets/Images/Flecha_Down.png" alt="Flecha indicando para lado inferior de la pagina">
         </a> 
     </div> 
         
     </header>
 
-   <div class="placeholder" id="newsection"></div>
-    
+
+    <div class="contenedor-nosotros-1" id="nosotros-1">
+        <div class="contenido-principal">
+            <h2 class="titulo-contenido" data-aos="fade-down" data-aos-delay="100">PILARES</h2>
+            <h3 class="subtitulos-contenido" data-aos="fade-down" data-aos-delay="200">Confianza</h3>
+            <h3 class="subtitulos-contenido" data-aos="fade-down" data-aos-delay="300">Experiencia</h3>
+            <h3 class="subtitulos-contenido" data-aos="fade-down" data-aos-delay="400">Confidencialidad</h3>
+            <button id="boton-abrir" data-aos="fade-down" data-aos-delay="500">Ver más</button>
+        </div>
+        
+        <div class="panel-principal">
+            <p class="nosotros-parrafo">En nuestra empresa, la Confianza, Experiencia y Confidencialidad son pilares que rigen cada una de nuestras acciones. Nos enfocamos en construir relaciones profesionales y transparentes con nuestros clientes, respaldados por décadas de trayectoria y un compromiso absoluto con la seguridad de su información.</p>
+            <button id="boton-cerrar">Cerrar</button>
+        </div>
+    </div>
+   
    
    <script>
     //Script JS para menu responsivo, se mantiene en body para evitar conflictos con JS linkeado//
@@ -98,6 +115,12 @@
         burger.classList.remove("active");
         navMenu.classList.remove("active");
     }
+   </script>
+
+   <!--Inicia AOS-->
+   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+   <script>
+       AOS.init();
    </script>
 
 </body>

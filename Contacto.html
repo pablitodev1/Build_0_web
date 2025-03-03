@@ -18,7 +18,10 @@
     <link rel="stylesheet" href="/Assets/CSS/style.css">
 
     <!--Link JS-->
-    <script src="/Assets/JS/script.js"></script>
+    <script src="/Assets/JS/script.js" defer></script>
+
+    <!--AOS Library / animaciones basicas-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
 
     <title>Balada Consultores, consultora boutique</title>
 </head>
@@ -66,15 +69,72 @@
         </div>
    
     <div class="btn-container">   
-        <a href="#newsection" class="down-btn">
+        <a href="#contacto" class="down-btn">
             <img src="/Assets/Images/Flecha_Down.png" alt="Flecha indicando para lado inferior de la pagina">
         </a> 
     </div> 
         
     </header>
 
-   <div class="placeholder" id="newsection"></div>
-   
+    <div class="contenedor-contacto" id="contacto" data-aos="fade-down" data-aos-delay="200">
+
+        <div class="contenedor-info">
+            <h3 class="titulo-info">
+                Correo
+            </h3>
+            <p class="contenido-info">
+                contacto@baladaglobal.com
+            </p>
+
+            <h3 class="titulo-info">
+                Teléfono
+            </h3>
+            <p class="contenido-info">
+                +569 7516 7649
+            </p>
+
+            <h3 class="titulo-info">
+                Dirección
+            </h3>
+            <p class="contenido-info">
+                Av. Apoquindo 2930, piso 9, <br>Las condes, Santiago.
+            </p>
+
+            <div class="contenedor-linkedin">
+                <h3 class="titulo-info">
+                    Linkedin
+                </h3>
+                <a href=""><img src="/Assets/Images/linkedin.png" alt="Logo de LinkedIn"></a>
+            </div>
+
+        </div>
+
+        <div class="contenedor-maps">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3330.2296056715168!2d-70.60171658918402!3d-33.41725779570131!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662cf6abf6ded43%3A0x50da2000b1316dbb!2sBalada%20Consultores!5e0!3m2!1ses-419!2scl!4v1740422754813!5m2!1ses-419!2scl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+
+    <footer>
+        <img src="/Assets/Images/logo_balada_negro.png" alt="Logo de Balada Consultores" class="logo-footer">
+
+        <div class="contenedor-info-footer">
+            
+            <ul class="contenedor-lista-footer">
+                <li>Av. Apoquindo 2930 piso 9, Las condes, Santiago</li>
+                <li>|</li>
+                <li><img src="/Assets/Images/WhatsApp.png" alt="logo whatsapp"></li>
+                <li>+569 7516 7649</li>
+                <li>|</li>
+                <li>contacto@baladaglobal.com</li>
+                <li>|</li>
+                <li>código postal: 7550202</li>
+            </ul>
+
+        </div>
+
+    </footer>
+
+  
    
    <script>
     //Script JS para menu responsivo, se mantiene en body para evitar conflictos con JS linkeado//
@@ -99,6 +159,12 @@
         navMenu.classList.remove("active");
     }
    </script>
+
+    <!--Inicia AOS-->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 
 </body>
 </html>

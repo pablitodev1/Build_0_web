@@ -18,7 +18,10 @@
     <link rel="stylesheet" href="/Assets/CSS/style.css">
 
     <!--Link JS-->
-    <script src="/Assets/JS/script.js"></script>
+    <script src="/Assets/JS/script.js" defer></script>
+
+    <!--AOS Library / animaciones basicas-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
 
     <title>Balada Consultores, consultora boutique</title>
 </head>
@@ -59,23 +62,107 @@
         </div>
 
     </nav>
-        <div class="Indicador-seccion-index"> <!--corresponde al titulo y subtituo de la pagina actual-->
+        <div class="Indicador-seccion" id="indicador-index"> <!--corresponde al titulo y subtituo de la pagina actual-->
             <h1 class="Titulo-seccion">Consultora Boutique</h1>
             <div class="Linea"></div>
             <p class="Subtitulo-seccion">Más de 80 años creando <br> soluciones integrales</p>
         </div>
    
-    <div class="btn-container">   
-        <a href="#newsection" class="down-btn">
+    <div class="btn-container">   <!--Boton en parte inferior de header que lleva a seccion con el ID-->
+        <a href="#seccion-1" class="down-btn">
             <img src="/Assets/Images/Flecha_Down.png" alt="Flecha indicando para lado inferior de la pagina">
         </a> 
     </div> 
         
     </header>
 
-   <div class="placeholder" id="newsection"></div>
+    <div class="contenedor-index-1" id="seccion-1" data-aos="fade-down" data-aos-delay="200">
+        <div class="texto-index-1">
+            <h2 class="titulo-index-1">Soluciones<br>a tu medida</h2>
+            <div class="linea-index-1"></div>
+            <p class="parrafo-index-1">Somos una consultora boutique especializada en la entrega de soluciones corporativas efectivas. Contamos con una unidad de asesoría estratégica y financiera que posee más de 80 años de experiencia en la atención de familias de alto patrimonio. Generamos soluciones tributarias a la medida, las cuales confeccionamos con un equipo multidisciplinario que consta de abogados, auditores y contadores.</p>
+        </div>
+
+        <div class="imagen-index-1">
+            <img src="/Assets/Images/Cartel_Recepcion_test.jpg" alt="Cartel metalico con logo de Balada">
+        </div>
+    </div>
+
+    <div class="contenedor-index-2" data-aos="fade-down" data-aos-delay="200">
+        <div class="texto-index-2">
+            <h2 class="titulo-index-2"> Nuestros<br>Servicios</h2>
+            <div class="linea-index-2"></div>
+        </div>
+
+        <div class="servicios-index-2">
+
+            <div class="titulo-responsivo-index-2">
+                <h2>Nuestros Servicios</h2>
+                <div class="linea-responsiva-index-2"></div>
+            </div>
+
+            <ul>
+                <li>
+                    <a href="#"> Tax Planning </a>
+                </li>
+
+                <li>
+                    <a href="#"> Estrategia y Finanzas </a>
+                </li>
+
+                <li>
+                    <a href="#"> Legal Corporativo </a>
+                </li>
+
+                <li>
+                    <a href="#"> Defensa Judicial y Tributaria</a>
+                </li>
+
+                <li>
+                    <a href="#"> Contabilidad </a>
+                </li>
+
+                <li>
+                    <a href="#" id="ver-mas"> Ver más </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="contenedor-index-3" data-aos="fade-down" data-aos-delay="200">
+
+        <div class="texto-index-3">
+            <p class="parrafo-jib">“Aunque estamos enfocados en un objetivo a futuro que busca posicionarnos como líderes en la entrega de un servicio integral, nunca hemos dejado de lado nuestra esencia de familiaridad y cercanía con nuestros clientes. </p>
+            <br> <br>
+            <p class="parrafo-jib">Nuestro compromiso es mantener este espíritu, prestando siempre atención al detalle y abordando con dedicación tanto los grandes desafíos como aquellos que otros podrían considerar insignificantes. Esto es lo que nos ha permitido construir una confianza inquebrantable con nuestros clientes, quienes se han mantenido con nosotros por generaciones.”</p>
+            <p id="firma-jib">Jose Ignacio Balada</p>
+            <p id="cargo-jib">Socio Principal</p>
+        </div>
+
+        <div class="imagen-index-3"></div>
+
+    </div>
     
-   
+    <footer>
+        <img src="/Assets/Images/logo_balada_negro.png" alt="Logo de Balada Consultores" class="logo-footer">
+
+        <div class="contenedor-info-footer">
+            <ul class="contenedor-lista-footer">
+                <li>Av. Apoquindo 2930 piso 9, Las condes, Santiago</li>
+                <li>|</li>
+                <li><img src="/Assets/Images/WhatsApp.png" alt="logo whatsapp"></li>
+                <li>+569 7516 7649</li>
+                <li>|</li>
+                <li>contacto@baladaglobal.com</li>
+                <li>|</li>
+                <li>código postal: 7550202</li>
+            </ul>
+        </div>
+
+    </footer>
+
+
+
    <script>
     //Script JS para menu responsivo, se mantiene en body para evitar conflictos con JS linkeado//
     const burger = document.querySelector(".burger");
@@ -99,6 +186,12 @@
         navMenu.classList.remove("active");
     }
    </script>
+
+   <!--Inicia AOS-->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 
 </body>
 </html>

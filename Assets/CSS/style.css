@@ -8,6 +8,7 @@
 html {
   font-size: 10px; /*esto establece el tamano de fuente universal, utililizar REM para medidas de fuentes*/
   scroll-behavior: smooth;
+  overflow-x: hidden; /*eliminamos cualquier posible overflow de raiz*/
 }
 
 li {
@@ -23,7 +24,7 @@ a {
 header {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   position: relative;
   width: 100%;
   height: 100vh;
@@ -37,7 +38,8 @@ header {
   width: 100vw;
   height: 100vh;
   background: url(/Assets/Images/Header_BG_60_v2.jpg) center/cover no-repeat;
-  animation: zoomBackground 60s ease;
+  animation: zoomBackground 50s ease;
+  animation-iteration-count: infinite;
   z-index: -1; 
 }
 
@@ -61,6 +63,7 @@ header {
   width: 100%;
   justify-content: space-around;
   align-items: center;
+  margin-top: 5vh;
 }
 
 .logo-navbar img {
@@ -90,10 +93,10 @@ header {
 .nav-link {
   color: #fff;
   font-family: 'Satoshi', sans-serif;
-  font-size: 1.5rem;
+  font-size: 2rem;
   padding: 5px 20px;
-  margin-left: 5px;
-  margin-right: 5px;
+  margin-left: 1vw;
+  margin-right: 1vw;
   transition: all .3s ease;
 }
 
@@ -104,46 +107,38 @@ header {
 }
 
 .filler-navbar { 
-  width: 3%;/*esto es un div invisible, que ayuda a centrar el navbar sin intervenir el resto del codigo, el width queda en porcentaje para garantizar buena posicion en cualquier pantalla*/
-}
-
-.Indicador-seccion-index { /*clase unica para INDEX, unica diferencia es cantidad de padding bottom para compensar por BR en subtitulo de seccion*/
-  width: 100%;
-  height: 70%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding-bottom: 0.8%; /*esto se agrega para compenzar y dejar la LINEA en el horizonte de la imagen en DESKTOP, irrelevante para mobil*/
-  gap: 10px;
-  text-align: center;
+  width: 2%;/*esto es un div invisible, que ayuda a centrar el navbar sin intervenir el resto del codigo, el width queda en porcentaje para garantizar buena posicion en cualquier pantalla*/
 }
 
 .Indicador-seccion {
   width: 100%;
-  height: 70%;
+  height: 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-bottom: 2.5%; /*esto se agrega para compenzar y dejar la LINEA en el horizonte de la imagen en DESKTOP, irrelevante para mobil*/
-  gap: 10px;
+  margin-bottom: 1.5%; /*esto se agrega para compenzar y dejar la LINEA en el horizonte de la imagen en DESKTOP, irrelevante para mobil*/
+  gap: 20px;
   text-align: center;
+}
+
+#indicador-index {
+  margin-top: 2%; /*esto es solo para la el indicador en index, compenza desplazamiento por BR*/
 }
 
 .Titulo-seccion {
   font-family: 'Satoshi', sans-serif;
   color: #ffffff;
   font-size: 5rem;
-  line-height: 5rem;
+  line-height: 4rem;
   font-weight: 600;
   opacity: 0;
   animation: fadeDown 0.8s ease forwards;
 }
 
 .Linea {
-  width: 200px;
-  height: 1px;
+  width: 230px;
+  height: 2px;
   opacity: 0;
   background-color: rgb(255, 255, 255);
   animation: fadeDown 0.8s ease 0.2s forwards; /*duracion de dropdown con delay de 0.2s*/
@@ -170,11 +165,13 @@ header {
   }
 }
 
-.btn-container { /*boton para ir a seccion ID, destino se cambia con ID en html*/
+ /*boton para ir a seccion ID, destino se cambia con ID en html*/
+.btn-container { 
   width: 100%;
   display: flex;
   justify-content: center;
   align-content: center;
+  margin-bottom: 5vh;
 }
 
 .down-btn {
@@ -191,28 +188,782 @@ header {
   scale: 1.5;
   transition: all .3s ease;
 }
-
-.placeholder {
-  width: 100%;
-  height: 900px;
-}
 /*Fin boton de seccion*/
-/* Fin seccion Header - CODIGO DE PABLO*/
 
-/* Seccion Servicios  - CODIGO DE SEBA */
+/*ESTILOS primera seccion de index*/
+.contenedor-index-1 {
+  display: flex;
+  height: 100vh;
+  width: auto;
+  overflow: hidden;
+  scroll-margin-top: -100px; /*esto es para compensar por el scroll down y animacion AOS, la animacion te desplaza el contenido 100 px de arriba a abajo, esto asegura que el boton del header te pone esta seccion 100% en pantalla sin problemas*/
+}
+
+.texto-index-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+  gap: 15px;
+  padding: 0% 12%;
+}
+
+.titulo-index-1 {
+  font-family: 'Satoshi', sans-serif;
+  font-weight: 400;
+  font-size: 5rem;
+  line-height: 5.5rem;
+}
+
+.linea-index-1 {
+  height: 1.5px;
+  width: 250px;
+  background-color:  #000000;
+}
+
+.parrafo-index-1 {
+  font-family:'Work sans', sans-serif;
+  font-size: 1.7rem;
+  line-height: 2.5rem;
+  font-weight: 450;
+}
+
+.imagen-index-1 {
+  width: 50%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.imagen-index-1 img {
+  height: 100%;
+  width: auto;
+}
+
+/*ESTILOS segunda seccion de index*/
+.contenedor-index-2 {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+}
+
+/*primera mitad de seccion*/
+.texto-index-2 {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url(/Assets/Images/Foto_Interior_Reunion.jpg);
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+  gap: 20px;
+  
+}
+
+.titulo-index-2 {
+  font-family: 'Satoshi', sans-serif;
+  font-size: 8rem;
+  line-height: 8rem;
+  font-weight: 400;
+  color: #ffffff;
+  text-align: start;
+}
+
+.linea-index-2 {
+  height: 1.5px;
+  margin-right: 3vw;
+  width: 250px;
+  background-color: #ffffff;
+}
+
+/* otra mitad de seccion */
+.servicios-index-2 {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.titulo-responsivo-index-2 {
+  display: none;
+}
+
+.servicios-index-2 ul {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5vh;
+  margin: 0;
+  padding: 0;
+}
+
+.servicios-index-2 ul li a {
+  display: block;
+  padding: 20px;
+  font-family: 'Satoshi', sans-serif;
+  font-size: 2.5rem;
+  color: #000000;
+  transition: all .5s ease;
+}
+
+.servicios-index-2 ul li a:hover {
+  color: #ffffff;
+  background-color: #000000;
+  transition: all .5s ease;
+}
+
+.contenedor-index-3 {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.texto-index-3 {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  justify-content: center;
+  align-items: center;
+  padding-right: 11vw;
+  padding-left: 11vw;
+}
+
+.parrafo-jib {
+  width: 100%;
+  font-family: 'Work sans', sans-serif;
+  font-size: 1.7rem;
+  line-height: 3.2rem;
+}
+
+#firma-jib {
+  width: 100%;
+  font-family: 'Satoshi', sans-serif;
+  font-weight: 700;
+  font-size: 2.5rem;
+  text-align: end;
+  margin-top: 2vw;
+}
+
+#cargo-jib {
+  width: 100%;
+  font-family: 'Satoshi', sans-serif;
+  font-size: 2.5rem;
+  text-align: end;
+}
+
+.imagen-index-3 {
+  width: 50%;
+  background-image: url(/Assets/Images/JIB_pel-v3.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/*FIN CODIGO DE PABLO*/
+
+/*CODIGO DE SEBA */
 footer {
   background-color: #F2F2F2;
   text-align: center;
-  justify-content: center;
-  padding-bottom: 5%;
-  font-size: 2rem;
+  margin-bottom: 5%;
 }
 
 .footer-logo {
-  height: 10rem;
+  height: 100px;
   margin-top: 5%;
-  margin-bottom: 1%;
 }
+/*FIN CODIGO DE SEBA*/
+
+/*NOSOTROS*/
+.contenedor-nosotros-1 {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-image: url(/Assets/Images/Pilares.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.contenido-principal {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  transition: width 0.5s ease;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+#boton-abrir {
+    border: none;
+    background-color: transparent;
+    font-family: 'Satoshi', sans-serif;
+    font-size: 3rem;
+    cursor: pointer;
+}
+
+#boton-abrir:hover {
+    font-weight: 600;
+}
+
+#boton-cerrar {
+  border: none;
+  color: #ffffff;
+  background-color: transparent;
+  font-family: 'Satoshi', sans-serif;
+  font-size: 3rem;
+  cursor: pointer;
+}
+
+.titulo-contenido {
+  font-family: 'Satoshi', sans-serif;
+  font-size: 5rem;
+  text-decoration: underline;
+}
+
+.subtitulos-contenido {
+  font-family: 'Satoshi', sans-serif;
+  font-size: 5rem;
+  font-weight: 400;
+}
+
+.panel-principal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  position: absolute;
+  top: 0;
+  right: -50%;
+  width: 50%;
+  height: 100%;
+  box-sizing: border-box;
+  background-color: transparent;
+  transition: transform 0.5s ease;
+}
+
+.nosotros-parrafo {
+  font-family: 'Work sans', sans-serif;
+  font-size: 2rem;
+  line-height: 3rem;
+  color: #ffffff;
+  padding-left: 20%;
+  padding-right: 20%;
+  text-align: justify;
+}
+
+/*HISTORIA*/ 
+.contenedor-historia-1 {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  scroll-margin-top: -100px;
+  overflow: hidden;
+}
+
+.texto-historia-1 {
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 10%;
+  padding-right: 10%;
+  gap: 10px; 
+}
+
+.titulo-texto-historia-1 {
+  font-family: 'Satoshi', sans-serif;
+  font-weight: 400;
+  font-size: 5rem;
+  line-height: 5rem;
+}
+
+.linea-historia-1 {
+  height: 2px;
+  width: 200px;
+  background-color: #000000;
+}
+
+.parrafo-historia-1 {
+  font-family: 'Work sans', sans-serif;
+  font-size: 1.7rem;
+  line-height: 2.8rem;
+}
+
+.imagen-historia-1 {
+  width: 50%;
+  background-image: url(/Assets/Images/Cartel_.jpeg);
+  background-position: center;
+  background-size: cover;
+}
+
+.contenedor-historia-2 {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.izq-historia-2 {
+  display: flex;
+  width: 50%;
+  justify-content: end;
+  align-items: center;
+}
+
+.posicion-izq-2 {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+}
+
+.imagen-historia-2 {
+  width:  300px;
+  height: 550px;
+  background-image: url(/Assets/Images/JoseSoler.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.subtitulo-imagen-historia-2 {
+  font-family: 'Satoshi', sans-serif;
+  font-size: 2rem;
+  text-align: center;
+  width: 300px;
+}
+
+.der-historia-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+  gap: 15px;
+  padding-left: 3%;
+}
+
+.titulo-historia-2 {
+  font-family: 'Satoshi', sans-serif;
+  font-size: 4rem;
+  line-height: 4rem;
+  font-weight: 400;
+}
+
+.linea-historia-2 {
+  width: 300px;
+  height: 2px;
+  background-color: #000000;
+}
+
+.contenedor-historia-3 {
+  width: 100%;
+  height: auto;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  margin-bottom: 50px;
+}
+
+.titulos-historia {
+  font-family: 'Work sans', sans-serif;
+  font-size: 1.7rem;
+  font-weight: 700;
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+
+.parrafos-historia {
+  font-family: 'Work sans', sans-serif;
+  font-size: 1.7rem;
+  line-height: 2.4rem;
+  font-weight: 400;
+  text-align: justify;
+}
+
+/*CONTACTO*/ 
+.contenedor-contacto {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  scroll-margin-top: -100px;
+}
+
+.contenedor-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 15vw;
+  width: 50%;
+  background-color: #000000;
+}
+
+.titulo-info {
+  font-family: 'Satoshi', sans-serif;
+  font-weight: 500;
+  font-size: 4rem;
+  color: #ffffff;
+}
+
+.contenido-info {
+  font-family: 'Satoshi', sans-serif;
+  text-wrap: wrap;
+  font-size: 2rem;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.contenedor-linkedin {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.contenedor-linkedin a img{
+  width: 40px;
+}
+
+
+.contenedor-maps {
+  display: flex;
+  width: 50%;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+/*FOOTER*/
+footer {
+  width: 100%;
+  height: auto;
+  background-color: #f0f0f0;
+  margin: 0;
+}
+
+.logo-footer {
+  padding-top: 40px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80px;
+}
+
+.contenedor-info-footer {
+  width: 100%;
+  height: auto;
+  padding-top: 10px;
+  padding-bottom: 40px;
+}
+
+.contenedor-lista-footer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.contenedor-lista-footer li {
+  font-family: 'Work sans', sans-serif;
+  font-size: 1.5rem;
+  color: #000000;
+}
+
+.contenedor-lista-footer li img {
+  width: 20px;
+}
+
+
+@media only screen and (max-width: 1100px) {
+
+  .texto-index-1 {
+    padding: 0% 5%;
+  }
+
+  .texto-index-3 {
+    padding-right: 8vw ;
+    padding-left: 8vw;
+  }
+
+  .parrafo-jib {
+    font-size: 1.5rem;
+    line-height: 3rem;
+  }
+
+  #firma-jib {
+    font-size: 2rem;
+  }
+  
+  #cargo-jib {
+    font-size: 2rem;
+  }
+ 
+  /*HISTORIA*/
+  .texto-historia-1 {
+    padding-left: 6%;
+    padding-right: 6%;
+  }
+
+  .titulo-texto-historia-1 {
+    font-size: 4rem;
+  }
+
+  .parrafo-historia-1 {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+  }
+
+  /*CONTACTO*/
+  .contenedor-info {
+    padding-left: 10vw;
+  }
+
+
+}
+
+@media only screen and (max-width: 750px) { /*PRIMER BREAKPOINT PARA PANTALLAS CHICAS*/
+
+  /*SECCION NAVBAR REPONSIVA */
+  .nav-menu {
+      position: fixed;
+      left: -100%;
+      top: 12rem; /*la distancia desde top al inicio del menu*/
+      flex-direction: column;
+      background-color: #2f2f2f;
+      width: 100%;
+      text-align: center;
+      transition: 0.3s;
+      z-index: 1;
+  }
+
+  .nav-menu.active {
+      left: 0;
+  }
+
+  .nav-item {
+      width: 100%;
+      padding-top: 40px;
+      padding-bottom: 40px;
+      border-top: 1px solid #808080;
+      border-bottom: 1px solid #808080;
+  }
+
+  .nav-link:hover {
+      color: #ffffff;
+      background-color: #2f2f2f;
+      transition: all .3s ease;
+  }
+
+  .burger {
+      display: block;
+      cursor: pointer;
+  }
+
+  .burger.active .bar:nth-child(2) {
+      opacity: 0;
+  }
+
+  .burger.active .bar:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+  }
+
+  .burger.active .bar:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .Titulo-seccion {
+    margin-left: 5px;
+    margin-right: 5px;
+    font-size: 4rem;
+    line-height: 4rem;
+  }
+  
+  .Linea {
+    width: 200px;
+    height: 1px;
+  }
+  
+  .Subtitulo-seccion {
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+
+ /*SECCION CONTENIDO INDEX */
+  .contenedor-index-1 {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+  }
+
+  .texto-index-1 {
+    width: 100%;
+    height: auto;
+    align-items: center;
+    text-align: center;
+    padding: 100px 50px;
+  }
+
+  .titulo-index-1 {
+    font-size: 4.5rem;
+    line-height: 5rem;
+  }
+
+  .parrafo-index-1 {
+    font-size: 1.5rem;
+    line-height: 2.2rem;
+  }
+
+  .imagen-index-1 {
+    display: none;
+  }
+
+  /*Para Contenedor Index 2*/
+
+  .contenedor-index-2 {
+    height: 100vh;
+  }
+
+  .texto-index-2 {
+    display: none;
+  }
+
+  .titulo-responsivo-index-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    margin-bottom: 20px;
+  }
+
+  .titulo-responsivo-index-2 h2 {
+    font-family: 'Satoshi', sans-serif;
+    font-size: 3rem;
+    text-align: center;
+    color: #ffffff;
+  }
+
+  .linea-responsiva-index-2 {
+    display: block;
+    background-color: #ffffff;
+    height: 1px;
+    width: 150px;
+  }
+
+  .servicios-index-2 {
+    width: 100%;
+    background-image: url(/Assets/Images/Foto_Interior_Reunion.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+
+  .servicios-index-2 ul {
+    gap: 10px;
+  }
+
+  .servicios-index-2 ul li a {
+    text-align: center;
+    color: #ffffff;
+  }
+
+  #ver-mas{
+    font-weight: 600;
+  }
+
+  /*Para Contenedor Index 3*/
+
+  .texto-index-3 {
+    width: 100%;
+  }
+
+  .imagen-index-3 {
+    display: none;
+  }
+
+/*NOSOTROS*/
+
+.panel-principal {
+  width: 100%;
+  right:-100%;
+  background-image: url(/Assets/Images/Pilares.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+
+/*HISTORIA*/
+  .texto-historia-1 {
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    padding-left: 8%;
+    padding-right: 8%;
+  }
+
+  .imagen-historia-1 {
+    display: none;
+  }
+
+  .imagen-historia-2 {
+    width: 50vw;
+  }
+
+  .subtitulo-imagen-historia-2 {
+    width: 50vw;
+  }
+
+  .titulo-historia-2 {
+    font-size: 3rem;
+    line-height: 3rem;
+  }
+
+  .linea-historia-2 {
+    width: 175px
+  }
+
+
+  /*CONTACTO*/
+  .contenedor-contacto {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .contenedor-info {
+    width: 100%;
+    height: auto;
+    padding-left: 0;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .contenedor-maps {
+    width: 100%;
+    padding: 50px;
+  }
+}
+
+
+/*Fin boton de seccion*/
+/* Fin seccion Header - CODIGO DE PABLO*/
+
+/* Seccion Servicios  - CODIGO DE SEBA *
 
 /* segunda parte de la pagina */
 .info-servicios {
@@ -389,70 +1140,7 @@ footer {
 
 @media only screen and (max-width: 750px) {
 
-  /*SECCION NAVBAR REPONSIVA */
-  .nav-menu {
-      position: fixed;
-      left: -100%;
-      top: 7rem;
-      flex-direction: column;
-      background-color: #2f2f2f;
-      width: 100%;
-      text-align: center;
-      transition: 0.3s;
-      z-index: 1;
-  }
-
-  .nav-menu.active {
-      left: 0;
-  }
-
-  .nav-item {
-      width: 100%;
-      padding-top: 30px;
-      padding-bottom: 30px;
-      border-top: 1px solid #808080;
-      border-bottom: 1px solid #808080;
-  }
-
-  .nav-link:hover {
-      color: #ffffff;
-      background-color: #2f2f2f;
-      transition: all .3s ease;
-  }
-
-  .burger {
-      display: block;
-      cursor: pointer;
-  }
-
-  .burger.active .bar:nth-child(2) {
-      opacity: 0;
-  }
-
-  .burger.active .bar:nth-child(1) {
-      transform: translateY(8px) rotate(45deg);
-  }
-
-  .burger.active .bar:nth-child(3) {
-      transform: translateY(-8px) rotate(-45deg);
-  }
-
-  .Titulo-seccion {
-    margin-left: 5px;
-    margin-right: 5px;
-    font-size: 4rem;
-    line-height: 4rem;
-  }
-  
-  .Linea {
-    width: 200px;
-    height: 1px;
-  }
-  
-  .Subtitulo-seccion {
-    font-size: 2rem;
-    line-height: 2rem;
-  }
+ 
 
   /*SECCION SERVICIOS RESPONSIVA */
   .secciones {
@@ -497,3 +1185,4 @@ footer {
       font-size: 1.6rem;
   }
 }
+
