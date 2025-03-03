@@ -380,9 +380,86 @@ footer {
 /*FIN CODIGO DE SEBA*/
 
 /*NOSOTROS*/
+.contenedor-nosotros-1 {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-image: url(/Assets/Images/Pilares.jpg);
+  background-size: cover;
+  background-position: center;
+}
 
+.contenido-principal {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  transition: width 0.5s ease;
+  background-color: rgba(255, 255, 255, 0.7);
+}
 
+#boton-abrir {
+    border: none;
+    background-color: transparent;
+    font-family: 'Satoshi', sans-serif;
+    font-size: 3rem;
+    cursor: pointer;
+}
 
+#boton-abrir:hover {
+    font-weight: 600;
+}
+
+#boton-cerrar {
+  border: none;
+  color: #ffffff;
+  background-color: transparent;
+  font-family: 'Satoshi', sans-serif;
+  font-size: 3rem;
+  cursor: pointer;
+}
+
+.titulo-contenido {
+  font-family: 'Satoshi', sans-serif;
+  font-size: 5rem;
+  text-decoration: underline;
+}
+
+.subtitulos-contenido {
+  font-family: 'Satoshi', sans-serif;
+  font-size: 5rem;
+  font-weight: 400;
+}
+
+.panel-principal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  position: absolute;
+  top: 0;
+  right: -50%;
+  width: 50%;
+  height: 100%;
+  box-sizing: border-box;
+  background-color: transparent;
+  transition: transform 0.5s ease;
+}
+
+.nosotros-parrafo {
+  font-family: 'Work sans', sans-serif;
+  font-size: 2rem;
+  line-height: 3rem;
+  color: #ffffff;
+  padding-left: 20%;
+  padding-right: 20%;
+  text-align: justify;
+}
 
 /*HISTORIA*/ 
 .contenedor-historia-1 {
@@ -817,6 +894,18 @@ footer {
   .imagen-index-3 {
     display: none;
   }
+
+/*NOSOTROS*/
+
+.panel-principal {
+  width: 100%;
+  right:-100%;
+  background-image: url(/Assets/Images/Pilares.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+
 /*HISTORIA*/
   .texto-historia-1 {
     align-items: center;
