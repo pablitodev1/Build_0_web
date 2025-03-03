@@ -56,7 +56,7 @@ header {
   100% {
     transform: scale(1);
   }
- }
+}
 
 .navbar {
   display: flex;
@@ -163,7 +163,7 @@ header {
     opacity: 1;
     transform: translateY(0);
   }
- }
+}
 
  /*boton para ir a seccion ID, destino se cambia con ID en html*/
 .btn-container { 
@@ -956,6 +956,233 @@ footer {
   .contenedor-maps {
     width: 100%;
     padding: 50px;
+  }
+}
+
+
+/*Fin boton de seccion*/
+/* Fin seccion Header - CODIGO DE PABLO*/
+
+/* Seccion Servicios  - CODIGO DE SEBA *
+
+/* segunda parte de la pagina */
+.info-servicios {
+  padding: 2rem; 
+  text-align: center;
+  background-color: #eaeaea;
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
+
+/* navbar de los servicios disponibles */
+.lista-servicios {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 10vh;
+  width: 100vw;
+  padding: 0;
+  margin: 0;
+  background-color: #E5E5E5;
+}
+
+.lista-servicios button {
+  font-family: 'Satoshi', sans-serif;
+  color: black;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  background-color: #E5E5E5;
+}
+
+.lista-servicios button:hover {
+  font-weight: bold;
+  background-color: transparent;
+}
+
+.lista-servicios button.active {
+  font-weight: bold;
+  background-color: transparent;
+}
+
+/* secciones de la pagina */
+.secciones {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  width: 100%;
+  height: auto;
+}
+
+/* seccion izquierda */
+.seccion-izq {
+  display: flex;
+  flex: 1;
+  width: 50%;
+  height: 90vh;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  overflow: hidden; 
+  z-index: 1;
+}
+
+/* imagen de fondo de la seccion izquierda */
+.bg-img-izq {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/Assets/Images/izq_placeholder.jpg'); /* Ruta de la imagen */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-blend-mode: difference;
+  filter: brightness(0.5);
+  z-index: -1;
+}
+
+.seccion-izq h1 {
+  font-family: 'Satoshi', sans-serif;
+  font-size: 6rem;
+  text-align: start;
+  margin-left: 25%;
+  margin-right: 25%;
+  color: white;
+}
+
+.line {
+  height: 1px;
+  width: 36rem;
+  background-color: white;
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-top: 0.6rem;
+  margin-bottom: 0.7rem;
+}
+
+.seccion-izq p {
+  font-family: 'work-sans', sans-serif;
+  font-size: 2rem;
+  margin-left: 25%;
+  margin-right: 20%;
+  line-height: 1.6;
+  text-align: start;
+  color: white;
+}
+
+/* seccion derecha */
+.seccion-der {
+  flex: 1;
+  display: flex;
+  width: 50%;
+  height: 90vh;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 1.5rem;
+  font-family: 'Satoshi', sans-serif;
+  position: relative;
+  overflow: hidden; 
+  z-index: 1;
+}
+
+.content-block {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+
+@media only screen and (max-width: 1100px) {
+  .seccion-izq {
+    width: 65%;
+    flex: 0 0 65%;
+    padding: 30px;
+  }
+
+  .seccion-der {
+      width: 35%;
+      flex: 0 0 35%;
+      padding: 30px;
+  }
+
+  .seccion-izq h1 {
+      font-size: 5.2rem;
+      margin: 15px 10%;
+  }
+
+  .seccion-izq p {
+      font-size: 2rem;
+      margin: 10px 10%;
+      line-height: 1.5;
+  }
+
+  .line {
+      width: 35rem;
+      margin: 10px 10%;
+  }
+
+  .lista-servicios {
+      height: auto;
+      padding: 15px 0;
+  }
+
+  .lista-servicios button {
+      font-size: 2rem;
+      padding: 10px;
+  }
+}
+
+
+@media only screen and (max-width: 750px) {
+
+ 
+
+  /*SECCION SERVICIOS RESPONSIVA */
+  .secciones {
+    min-height: 100vh;
+  }
+
+  .seccion-izq {
+    width: 65%;
+    flex: 0 0 65%;
+    padding: 20px;
+  }
+
+  .seccion-der {
+      width: 35%;
+      flex: 0 0 35%;
+      padding: 20px; 
+  }
+
+  .seccion-izq h1 {
+      font-size: 5rem;
+      margin: 15px 15%;
+  }
+
+  .seccion-izq p {
+      font-size: 1.8rem;
+      margin: 10px 15%;
+      line-height: 1.4;
+  }
+
+  .line {
+      width: 70%;
+      margin: 10px 15%;
+  }
+
+  .lista-servicios {
+      padding: 10px 0;
+      height: auto;
+  }
+
+  .lista-servicios button {
+      padding: 10px;
+      font-size: 1.6rem;
   }
 }
 
