@@ -3,8 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Esto es un link para fontawesome, biblioteca de iconos-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!--Link a fontshare para tipografia SATOSHI-->
     <link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,301,400,401,500,501,700,701,900,901&display=swap" rel="stylesheet">
@@ -14,17 +12,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
-    <!--Link a google fonts para icono DownArrow-->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=keyboard_arrow_down" />
-
     <!--Link CSS-->
     <link rel="stylesheet" href="/Assets/CSS/style.css">
 
     <!--Link JS-->
     <script src="/Assets/JS/script.js" defer></script>
-
+    <link rel="icon" type="image/png" href="/Assets/Images/favicon.png"/>
     <title>Balada Consultores, consultora boutique</title>
 </head>
+
 <body>
     <header>
 
@@ -75,32 +71,6 @@
         
     </header>   
    
-   <script>
-    //Script JS para menu responsivo, se mantiene en body para evitar conflictos con JS linkeado//
-    const burger = document.querySelector(".burger");
-    const navMenu = document.querySelector(".nav-menu");
-
-        burger.addEventListener("click", mobileMenu);
-
-    function mobileMenu() {
-        burger.classList.toggle("active");
-        navMenu.classList.toggle("active"); 
-    }
-
-    // Al cliquear la X se cierra icono hamburguesa
-
-    const navLink = document.querySelectorAll(".nav-link");
-
-        navLink.forEach(n => n.addEventListener("click", closeMenu));
-
-    function closeMenu() {
-        burger.classList.remove("active");
-        navMenu.classList.remove("active");
-    }
-   </script>
- <!-- FIN CODIGO SECCION PABLO -->
-
- <!-- INICIO CODIGO SEBA -->
   <!-- Listado de servicios -->
     <div class="lista-servicios" id="lista-servicios">
         <button class="tablinks" data-tab="tax" onclick="openSection(event,1)" id="defaultOpen">Tax Planning</button>
@@ -112,154 +82,138 @@
     <!-- Contenedor de información de servicios -->
     <div class="info-servicios" id="info-servicios">
         <!-- Secciones de cada listado -->
-        <!-- Seccion de Tax Planning -->
+        <!-- Tax Planning -->
         <div class="secciones" id="1" data-tab="tax">
-            <div class="seccion-izq">
-                <div class="bg-img-izq"></div>
+            <div class="seccion-izq" id="bg-1">
                 <h1>Tax Planning</h1>
                 <div class="line"></div>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia culpa laudantium voluptatibus. Molestias voluptatibus quis provident minus ipsa numquam itaque repellendus tempore sapiente maiores vitae rem, atque officia a aliquam.</p>
+                <p>Para nosotros el tax planning no se limita a la mera gestión de obligaciones fiscales: implica la confección profesional de un plan calculado estratégico y creativo. <br><br>Con una trayectoria de más de 80 años,nuestro equipo diseña soluciones personalizadas que incluyen reestructuración societaria, planificación de sucesiones y vehículos de inversión en el extranjero, todo bajo un marco legal riguroso. Nuestra meta consiste en comprender a fondo cada escenario para crear estrategias eficientes, sin perder de vista objetivos de crecimiento y estabilidad. Cada solución es un traje a la medida.</p>
             </div>
 
             <div class="seccion-der">
-                <h1>Servicio 1</h1>
-                <h1>Servicio 2</h1>
-                <h1>Servicio 3</h1>
-                <h1>Servicio 4</h1>
-                <h1>Servicio 5</h1>
-                <h1>Servicio 6</h1>
-                <h1>Servicio 7</h1>
+                <h1>Restructuración societaria</h1>
+                <h1>Planificación de sucesiones</h1>
+                <h1>Vehículos de inversión en el extranjero</h1>
             </div>
         </div>
 
-        <!-- Seccion de Estrategia y finanzas -->
+        <!-- Estrategia y finanzas -->
         <div class="secciones" id="2" style="flex-direction: column;" data-tab="estrategia">
             <div class="content-block">
-                <div class="seccion-izq">
-                    <div class="bg-img-izq"></div>
+                <div class="seccion-izq" id="bg-2">
                     <h1>Estrategia Corporativa</h1>
                     <div class="line"></div>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia culpa laudantium voluptatibus. Molestias voluptatibus quis provident minus ipsa numquam itaque repellendus tempore sapiente maiores vitae rem, atque officia a aliquam.</p>
+                    <p>El crecimiento sostenible de una empresa no ocurre por azar: es el resultado de decisiones estratégicas bien fundamentadas. <br><br>Con más de 80 años de experiencia, ayudamos a estructurar modelos de negocio sólidos, optimizar la gobernanza y anticipar escenarios clave para la toma de decisiones. Analizamos cada contexto con profundidad, diseñando estrategias adaptadas que permitan a las empresas evolucionar con seguridad y competitividad.</p>
                 </div>
     
                 <div class="seccion-der">
-                    <h1>Servicio 1</h1>
-                    <h1>Servicio 2</h1>
-                    <h1>Servicio 3</h1>
-                    <h1>Servicio 4</h1>
-                    <h1>Servicio 5</h1>
-                    <h1>Servicio 6</h1>
-                    <h1>Servicio 7</h1>
+                    <h1>Restrucuración corporativa y crecimiento</h1>
+                    <h1>Gobierno corporativo</h1>
+                    <h1>ESG</h1>
+                    <h1>Compliance</h1>
+                    <h1>Control de gestión</h1>
                 </div>
             </div>
             <div class="content-block">
                 <div class="seccion-izq">
                     <h1 style="color: black;">Estrategia Financiera</h1>
                     <div class="line" style="background-color: black;"></div>
-                    <p style="color: black;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia culpa laudantium voluptatibus. Molestias voluptatibus quis provident minus ipsa numquam itaque repellendus tempore sapiente maiores vitae rem, atque officia a aliquam.</p>
+                    <p style="color: black;">Una planificación financiera efectiva no solo protege el presente, sino que también traza el camino hacia el futuro. <br><br> Desde la optimización de estructuras de capital hasta el diseño de estrategias de financiamiento, nuestro equipo aporta soluciones que equilibran crecimiento, rentabilidad y control de riesgos. Nuestra experiencia nos permite analizar cada caso con visión estratégica, asegurando decisiones financieras alineadas con los objetivos y la estabilidad de nuestros clientes.</p>
                 </div>
     
-                <div class="seccion-der" style="color: white;">
-                    <div class="bg-img-izq"></div>
-                    <h1>Servicio 1</h1>
-                    <h1>Servicio 2</h1>
-                    <h1>Servicio 3</h1>
-                    <h1>Servicio 4</h1>
-                    <h1>Servicio 5</h1>
-                    <h1>Servicio 6</h1>
-                    <h1>Servicio 7</h1>
+                <div class="seccion-der" id="bg-3" style="color: white;">
+                    <h1>Restructuración financiera</h1>
+                    <h1>Riesgo financiero</h1>
+                    <h1>Investor</h1>
+                    <h1>Tesorería y capital de trabajo</h1>
                 </div>
             </div>
             <div class="content-block">
-                <div class="seccion-izq">
-                    <div class="bg-img-izq"></div>
+                <div class="seccion-izq" id="bg-4">
                     <h1>Finanzas</h1>
                     <div class="line"></div>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia culpa laudantium voluptatibus. Molestias voluptatibus quis provident minus ipsa numquam itaque repellendus tempore sapiente maiores vitae rem, atque officia a aliquam.</p>
+                    <p>En un entorno donde cada decisión económica impacta en la estabilidad y el crecimiento, un enfoque financiero riguroso es clave. <br><br>Acompañamos a nuestros clientes en la gestión de activos, evaluación de inversiones y optimización de estructuras de costos, siempre con un análisis preciso y orientado a la eficiencia. Nuestra visión no se limita a los números: buscamos generar valor real a largo plazo, asegurando soluciones sostenibles y alineadas con cada necesidad.</p>
                 </div>
     
                 <div class="seccion-der">
-                    <h1>Servicio 1</h1>
-                    <h1>Servicio 2</h1>
-                    <h1>Servicio 3</h1>
-                    <h1>Servicio 4</h1>
-                    <h1>Servicio 5</h1>
-                    <h1>Servicio 6</h1>
-                    <h1>Servicio 7</h1>
+                    <h1>Financiamiento y refinanciamiento</h1>
+                    <h1>M&A</h1>
+                    <h1>Evaluación de proyectos</h1>
+                    <h1>Otros (FIP)</h1>
                 </div>
             </div>
         </div>
 
-        <!-- Seccion de Legal Corporativo -->
+        <!-- Legal Corporativo -->
         <div class="secciones" id="3" data-tab="legal">
-            <div class="seccion-izq">
-                <div class="bg-img-izq"></div>
+            <div class="seccion-izq" id="bg-5">
                 <h1>Legal Corporativo</h1>
                 <div class="line"></div>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia culpa laudantium voluptatibus. Molestias voluptatibus quis provident minus ipsa numquam itaque repellendus tempore sapiente maiores vitae rem, atque officia a aliquam.</p>
+                <p>Entendemos que las necesidades legales de nuestros clientes pueden ser tan variadas como sus objetivos. <br><br>Además de atender requerimientos específicos, estamos preparados para abordar situaciones adicionales o imprevistas, ofreciendo un servicio integral que cubre incluso las áreas más inesperadas. Nuestra amplia experiencia en materias corporativas y civiles, siempre con un enfoque tributario, nos permite brindar soluciones precisas y completas.
+                    </p>
             </div>
 
             <div class="seccion-der">
-                <h1>Servicio 1</h1>
-                <h1>Servicio 2</h1>
-                <h1>Servicio 3</h1>
-                <h1>Servicio 4</h1>
-                <h1>Servicio 5</h1>
-                <h1>Servicio 6</h1>
-                <h1>Servicio 7</h1>
+                <h1>Reorganización societal y empresarial</h1>
+                <h1>Fideicomisos</h1>
+                <h1>Aplicaciones del derecho comercial y corporativo</h1>
+                <h1>Fusiones, divisiones y adquisiciones</h1>
             </div>
         </div>
 
-        <!-- Seccion de Defensa judicial y tributaria -->
+        <!-- Defensa judicial y tributaria -->
         <div class="secciones" id="4" data-tab="defensa">
-            <div class="seccion-izq">
-                <div class="bg-img-izq"></div>
+            <div class="seccion-izq" id="bg-6">
                 <h1>Defensa Judicial y Tributaria</h1>
                 <div class="line"></div>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia culpa laudantium voluptatibus. Molestias voluptatibus quis provident minus ipsa numquam itaque repellendus tempore sapiente maiores vitae rem, atque officia a aliquam.</p>
+                <p>Las complejidades del sistema tributario pueden causar desafíos legales y administrativos, que requiere de representación experta y diligente. <br><br>En Balada ofrecemos una defensa integral, que incluye la atención de citaciones, observaciones y reclamos tributarios, así como el diseño de planes para enfrentar fiscalizaciones como RAV y RAFF. Nuestro enfoque se basa en una combinación de análisis detallado, conocimiento normativo y experiencia práctica para proteger los intereses de nuestros clientes.
+                </p>
             </div>
 
             <div class="seccion-der">
-                <h1>Servicio 1</h1>
-                <h1>Servicio 2</h1>
-                <h1>Servicio 3</h1>
-                <h1>Servicio 4</h1>
-                <h1>Servicio 5</h1>
-                <h1>Servicio 6</h1>
-                <h1>Servicio 7</h1>
+                <h1>Juicios civiles</h1>
+                <h1>Juicios tributarios</h1>
+                <h1>RAV y RAFF</h1>
+                <h1>Defensa tributaria</h1>
             </div>
         </div>
 
-        <!-- Seccion de Contabilidad -->
+        <!-- Contabilidad -->
         <div class="secciones" id="5" data-tab="contabilidad">
-            <div class="seccion-izq">
-                <div class="bg-img-izq"></div>
+            <div class="seccion-izq" id="bg-7">
                 <h1>Contabilidad</h1>
                 <div class="line"></div>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia culpa laudantium voluptatibus. Molestias voluptatibus quis provident minus ipsa numquam itaque repellendus tempore sapiente maiores vitae rem, atque officia a aliquam.</p>
+                <p>Desde nuestros inicios, la contabilidad ha sido un área fundamental de nuestro trabajo, asesorando a cada cliente con un servicio íntegro que garantiza la correcta gestión de recursos. Midiendo, registrando e informando los hechos económicos ocurridos en empresas. <br><br>Hoy, integramos estas soluciones en una propuesta más amplia, complementando nuestro enfoque en eficiencia tributaria, asegurando el cumplimiento fiscal y optimizando procesos financieros. Nuestro equipo se encarga de llevar a cabo la contabilidad, auditorías, declaración de renta, gestión tributaria entre otros.
+                    </p>
             </div>
 
             <div class="seccion-der">
-                <h1>Servicio 1</h1>
-                <h1>Servicio 2</h1>
-                <h1>Servicio 3</h1>
-                <h1>Servicio 4</h1>
-                <h1>Servicio 5</h1>
-                <h1>Servicio 6</h1>
-                <h1>Servicio 7</h1>
+                <h1>Declaración de renta</h1>
+                <h1>Cierres tributarios / Contables</h1>
+                <h1>Contabilidad</h1>
+                <h1>Auditorías</h1>
+                <h1>Gestión tributaria</h1>
             </div>
         </div>
     </div>
     
-    <footer>
-        <img class="footer-logo" src="/Assets/Images/logo_balada_blanco.png" alt="Logo">
-        <h2>Av. Apoquindo 2930 piso 9, Las Condes, Santiago | 
-            <!-- Logo de whatsapp -->
-            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
-                <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
-            </svg>
-            +569 7516 7649 | contacto@baladaglobal.com | Código postal: 7550202 </h2>
+     <footer>
+        <img src="/Assets/Images/logo_balada_negro.png" alt="Logo de Balada Consultores" class="logo-footer">
+
+        <div class="contenedor-info-footer">
+            <ul class="contenedor-lista-footer">
+                <li>Av. Apoquindo 2930 piso 9, Las condes, Santiago</li>
+                <li>|</li>
+                <li class="whatsapp-footer"><img src="/Assets/Images/WhatsApp.png" alt="logo whatsapp"><p>+569 7516 7649</p></li>
+                <li>|</li>
+                <li>contacto@baladaglobal.com</li>
+                <li>|</li>
+                <li>código postal: 7550202</li>
+            </ul>
+        </div>
+
     </footer>
+
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
@@ -276,7 +230,6 @@
         $(this).addClass("active");
         switching = false;
     });
-
 
     $(".tablinks").click(function(){
         const switchToAttr = $(this).attr("data-tab");

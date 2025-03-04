@@ -1,16 +1,47 @@
+// Script para menu responsivo HEADER//
+    const burger = document.querySelector(".burger");
+    const navMenu = document.querySelector(".nav-menu");
 
-  const toggleButton = document.getElementById('boton-abrir');
-  const closeButton = document.getElementById('boton-cerrar');
-  const content = document.querySelector('.contenido-principal');
-  const panel = document.querySelector('.panel-principal');
+        burger.addEventListener("click", mobileMenu);
 
-  toggleButton.addEventListener('click', () => {
-    content.style.width = '50%';
-    panel.style.transform = 'translateX(-100%)';
+    function mobileMenu() {
+        burger.classList.toggle("active");
+        navMenu.classList.toggle("active"); 
+    }
+
+
+    const navLink = document.querySelectorAll(".nav-link");
+
+        navLink.forEach(n => n.addEventListener("click", closeMenu));
+
+    function closeMenu() {
+        burger.classList.remove("active");
+        navMenu.classList.remove("active");
+    }
+ 
+
+ //Slide-in NOSOTROS
+  document.addEventListener('DOMContentLoaded', () => {
+
+    document.addEventListener('click', (event) => {
+      
+      if (event.target.classList.contains('boton-abrir')) {
+        const container = event.target.closest('.contenedor-nosotros');
+        const content = container.querySelector('.contenido-principal');
+        const panel = container.querySelector('.panel-principal');
+  
+        content.style.width = '50%'; 
+        panel.style.transform = 'translateX(-100%)'; 
+      }
+  
+      // Check if the clicked element is a closeButton
+      if (event.target.classList.contains('boton-cerrar')) {
+        const container = event.target.closest('.contenedor-nosotros');
+        const content = container.querySelector('.contenido-principal');
+        const panel = container.querySelector('.panel-principal');
+  
+        content.style.width = '100%'; 
+        panel.style.transform = 'translateX(0)'; 
+      }
+    });
   });
-
-  closeButton.addEventListener('click', () => {
-    content.style.width = '100%';
-    panel.style.transform = 'translateX(0)';
-  });
-

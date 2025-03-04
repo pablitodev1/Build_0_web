@@ -3,8 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Esto es un link para fontawesome, biblioteca de iconos-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!--Link a fontshare para tipografia SATOSHI-->
     <link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,301,400,401,500,501,700,701,900,901&display=swap" rel="stylesheet">
@@ -22,7 +20,7 @@
 
     <!--AOS Library / animaciones basicas-->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
-
+    <link rel="icon" type="image/png" href="/Assets/Images/favicon.png"/>
     <title>Balada Consultores, consultora boutique</title>
 </head>
 <body>
@@ -99,7 +97,7 @@
         <div class="izq-historia-2">
             <div class="posicion-izq-2">
                 <div class="imagen-historia-2"></div>
-                <h4 class="subtitulo-imagen-historia-2"> Jose Balada Soler</h4>
+                <h4 class="subtitulo-imagen-historia-2"> José Balada Soler</h4>
             </div>
         </div>
 
@@ -226,8 +224,7 @@
         <ul class="contenedor-lista-footer">
             <li>Av. Apoquindo 2930 piso 9, Las condes, Santiago</li>
             <li>|</li>
-            <li><img src="/Assets/Images/WhatsApp.png" alt="logo whatsapp"></li>
-            <li>+569 7516 7649</li>
+             <li class="whatsapp-footer"><img src="/Assets/Images/WhatsApp.png" alt="logo whatsapp"><p>+569 7516 7649</p></li>
             <li>|</li>
             <li>contacto@baladaglobal.com</li>
             <li>|</li>
@@ -236,31 +233,6 @@
     </div>
 
     </footer>
-
-
-   <script>
-    //Script JS para menu responsivo, se mantiene en body para evitar conflictos con JS linkeado//
-    const burger = document.querySelector(".burger");
-    const navMenu = document.querySelector(".nav-menu");
-
-        burger.addEventListener("click", mobileMenu);
-
-    function mobileMenu() {
-        burger.classList.toggle("active");
-        navMenu.classList.toggle("active"); 
-    }
-
-    // Al cliquear la X se cierra icono hamburguesa
-
-    const navLink = document.querySelectorAll(".nav-link");
-
-        navLink.forEach(n => n.addEventListener("click", closeMenu));
-
-    function closeMenu() {
-        burger.classList.remove("active");
-        navMenu.classList.remove("active");
-    }
-   </script>
 
    <!--Inicia AOS-->
    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>

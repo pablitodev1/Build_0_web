@@ -1,14 +1,16 @@
-/* SECCION DE RESETO DE CSS, elimina codigo involuntario de ciertos navegadores y dispositivos */
+/*CSS RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
 }
 
 html {
-  font-size: 10px; /*esto establece el tamano de fuente universal, utililizar REM para medidas de fuentes*/
+  font-size: 10px; /*Referente tamaño fuente*/
   scroll-behavior: smooth;
-  overflow-x: hidden; /*eliminamos cualquier posible overflow de raiz*/
+  overflow-x: hidden;
 }
 
 li {
@@ -18,9 +20,8 @@ li {
 a {
   text-decoration: none;
 }
-/* fin de reset de estilos */
 
-/*HEADER incluye navbar, imagen de fondo, indicador de seccion {titulo, linea y subtitulo} e imagen tipo flecha boton */
+/*HEADER*/
 header {
   display: flex;
   flex-direction: column;
@@ -141,7 +142,7 @@ header {
   height: 2px;
   opacity: 0;
   background-color: rgb(255, 255, 255);
-  animation: fadeDown 0.8s ease 0.2s forwards; /*duracion de dropdown con delay de 0.2s*/
+  animation: fadeDown 0.8s ease 0.2s forwards;
 }
 
 .Subtitulo-seccion {
@@ -151,7 +152,7 @@ header {
   line-height: 3rem;
   font-weight: 300;
   opacity: 0;
-  animation: fadeDown 0.8s ease 0.4s forwards; /*duracion de dropdown con delay de 0.4s*/
+  animation: fadeDown 0.8s ease 0.4s forwards;
 }
 
 @keyframes fadeDown { /*animacion para seccion de Titulo */
@@ -165,7 +166,7 @@ header {
   }
 }
 
- /*boton para ir a seccion ID, destino se cambia con ID en html*/
+ /*BOTON ID header*/
 .btn-container { 
   width: 100%;
   display: flex;
@@ -188,9 +189,60 @@ header {
   scale: 1.5;
   transition: all .3s ease;
 }
-/*Fin boton de seccion*/
 
-/*ESTILOS primera seccion de index*/
+/*FOOTER*/
+footer {
+  width: 100%;
+  height: auto;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.logo-footer {
+  padding-top: 40px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80px;
+}
+
+.contenedor-info-footer {
+  width: 100%;
+  height: auto;
+  padding-top: 10px;
+  padding-bottom: 40px;
+}
+
+.contenedor-lista-footer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.contenedor-lista-footer li {
+  font-family: 'Work sans', sans-serif;
+  font-size: 1.5rem;
+  color: #000000;
+}
+
+.contenedor-lista-footer li img {
+  width: 20px;
+}
+
+.whatsapp-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+/*INDEX*/
 .contenedor-index-1 {
   display: flex;
   height: 100vh;
@@ -222,10 +274,10 @@ header {
 }
 
 .parrafo-index-1 {
-  font-family:'Work sans', sans-serif;
+  font-family:'Work Sans', sans-serif;
   font-size: 1.7rem;
-  line-height: 2.5rem;
-  font-weight: 450;
+  line-height: 2.8rem;
+  font-weight: 400;
 }
 
 .imagen-index-1 {
@@ -242,14 +294,12 @@ header {
   width: auto;
 }
 
-/*ESTILOS segunda seccion de index*/
 .contenedor-index-2 {
   display: flex;
   width: 100%;
   height: 100vh;
 }
 
-/*primera mitad de seccion*/
 .texto-index-2 {
   width: 50%;
   display: flex;
@@ -280,7 +330,6 @@ header {
   background-color: #ffffff;
 }
 
-/* otra mitad de seccion */
 .servicios-index-2 {
   width: 50%;
   display: flex;
@@ -335,9 +384,10 @@ header {
 
 .parrafo-jib {
   width: 100%;
-  font-family: 'Work sans', sans-serif;
+  font-family: 'Work Sans', sans-serif;
   font-size: 1.7rem;
-  line-height: 3.2rem;
+  line-height: 2.8rem;
+  font-weight: 400;
 }
 
 #firma-jib {
@@ -364,28 +414,188 @@ header {
   background-repeat: no-repeat;
 }
 
-/*FIN CODIGO DE PABLO*/
-
-/*CODIGO DE SEBA */
-footer {
-  background-color: #F2F2F2;
-  text-align: center;
-  margin-bottom: 5%;
+/*SERVICIOS*/
+.info-servicios {
+  padding: 2rem; 
+  background-color: #ffffff;
+  height: auto;
+  margin: 0;
+  padding: 0;
 }
 
-.footer-logo {
-  height: 100px;
-  margin-top: 5%;
+/* navbar de los servicios disponibles */
+.lista-servicios {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 10vh;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  background-color: #E5E5E5;
+  overflow: hidden;
 }
-/*FIN CODIGO DE SEBA*/
+
+.lista-servicios button {
+  font-family: 'Satoshi', sans-serif;
+  color: black;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  background-color: transparent;
+}
+
+.lista-servicios button:hover {
+  font-weight: bold;
+  transition: all 0.15s ease;
+  background-color: transparent;
+ 
+}
+
+.lista-servicios button.active {
+  font-weight: bold;
+  background-color: transparent;
+}
+
+.secciones {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  width: 100%;
+  height: auto;
+}
+
+.seccion-izq {
+  display: flex;
+  width: 50%;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  overflow: hidden; 
+  padding-left: 10%;
+  padding-right: 10%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  gap: 10px;
+  z-index: 1;
+}
+
+#bg-1 {
+  background-image: url(/Assets/Images/izq_placeholder.jpg);
+}
+
+#bg-2 {
+  background-image: url(/Assets/Images/izq_placeholder.jpg);
+}
+
+#bg-3 {
+  background-image: url(/Assets/Images/izq_placeholder.jpg);
+}
+
+#bg-4 {
+  background-image: url(/Assets/Images/izq_placeholder.jpg);
+}
+
+#bg-5 {
+  background-image: url(/Assets/Images/izq_placeholder.jpg);
+}
+
+#bg-6 {
+  background-image: url(/Assets/Images/izq_placeholder.jpg);
+}
+
+#bg-7 {
+  background-image: url(/Assets/Images/izq_placeholder.jpg);
+}
+
+#bg-8 {
+  background-image: url(/Assets/Images/izq_placeholder.jpg);
+}
+
+.seccion-izq h1 {
+  font-family: 'Satoshi', sans-serif;
+  font-size: 4rem;
+  line-height: 5rem;
+  text-align: start;
+  color: white;
+}
+
+.line {
+  height: 1px;
+  width: 36rem;
+  background-color: white;
+}
+
+.seccion-izq p {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 1.5rem;
+  line-height: 1.8;
+  text-align: start;
+  color: white;
+}
+
+/* seccion derecha */
+.seccion-der {
+  display: flex;
+  width: 50%;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  gap: 35px;
+  font-family: 'Satoshi', sans-serif;
+  position: relative;
+  overflow: hidden; 
+  background-position: center;
+  background-size: cover;
+  padding-left: 14%;
+  padding-right: 12%;
+  z-index: 1;
+}
+
+.seccion-der h1 {
+  font-size: 2.5rem;
+  line-height: 2.8rem;
+}
+
+.content-block {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
 
 /*NOSOTROS*/
-.contenedor-nosotros-1 {
+.contenedor-nosotros {
   position: relative;
   width: 100%;
   height: 100vh;
   overflow: hidden;
+}
+
+#pilares {
   background-image: url(/Assets/Images/Pilares.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+#vision {
+  background-image: url(/Assets/Images/Vision.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+#mision {
+  background-image: url(/Assets/Images/Mision.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+#nuestros-valores {
+  background-image: url(/Assets/Images/Valores.jpg);
   background-size: cover;
   background-position: center;
 }
@@ -397,12 +607,13 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  text-align: center;
+  gap: 35px;
   transition: width 0.5s ease;
   background-color: rgba(255, 255, 255, 0.7);
 }
 
-#boton-abrir {
+.boton-abrir {
     border: none;
     background-color: transparent;
     font-family: 'Satoshi', sans-serif;
@@ -410,11 +621,11 @@ footer {
     cursor: pointer;
 }
 
-#boton-abrir:hover {
+.boton-abrir:hover {
     font-weight: 600;
 }
 
-#boton-cerrar {
+.boton-cerrar {
   border: none;
   color: #ffffff;
   background-color: transparent;
@@ -427,11 +638,14 @@ footer {
   font-family: 'Satoshi', sans-serif;
   font-size: 5rem;
   text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 5px;
 }
 
 .subtitulos-contenido {
   font-family: 'Satoshi', sans-serif;
-  font-size: 5rem;
+  font-size: 3.5rem;
+  line-height: 4rem;
   font-weight: 400;
 }
 
@@ -644,47 +858,7 @@ footer {
   padding-right: 5%;
 }
 
-/*FOOTER*/
-footer {
-  width: 100%;
-  height: auto;
-  background-color: #f0f0f0;
-  margin: 0;
-}
 
-.logo-footer {
-  padding-top: 40px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 80px;
-}
-
-.contenedor-info-footer {
-  width: 100%;
-  height: auto;
-  padding-top: 10px;
-  padding-bottom: 40px;
-}
-
-.contenedor-lista-footer {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 5px;
-}
-
-.contenedor-lista-footer li {
-  font-family: 'Work sans', sans-serif;
-  font-size: 1.5rem;
-  color: #000000;
-}
-
-.contenedor-lista-footer li img {
-  width: 20px;
-}
 
 
 @media only screen and (max-width: 1100px) {
@@ -710,6 +884,40 @@ footer {
   #cargo-jib {
     font-size: 2rem;
   }
+
+   /*SERVICIOS*/
+   .seccion-izq {
+    width: 65%;
+  }
+
+  .seccion-der {
+      width: 35%;
+      padding: 30px;
+  }
+
+  .seccion-izq h1 {
+      font-size: 5.2rem;
+  }
+
+  .seccion-izq p {
+      font-size: 1.3rem;
+      line-height: 1.5;
+  }
+
+  .line {
+      width: 35rem;
+  }
+
+  .lista-servicios {
+      height: auto;
+      padding: 15px 0;
+  }
+
+  .lista-servicios button {
+      font-size: 1.5rem;
+      padding: 10px;
+  }
+  
  
   /*HISTORIA*/
   .texto-historia-1 {
@@ -736,7 +944,7 @@ footer {
 
 @media only screen and (max-width: 750px) { /*PRIMER BREAKPOINT PARA PANTALLAS CHICAS*/
 
-  /*SECCION NAVBAR REPONSIVA */
+  /*NAVBAR HEADER*/
   .nav-menu {
       position: fixed;
       left: -100%;
@@ -801,7 +1009,12 @@ footer {
     line-height: 2rem;
   }
 
- /*SECCION CONTENIDO INDEX */
+/*FOOTER*/
+  .contenedor-lista-footer li {
+    font-size: 1.3rem;
+  }
+
+ /*INDEX*/
   .contenedor-index-1 {
     flex-direction: column;
     justify-content: center;
@@ -831,8 +1044,6 @@ footer {
   .imagen-index-1 {
     display: none;
   }
-
-  /*Para Contenedor Index 2*/
 
   .contenedor-index-2 {
     height: 100vh;
@@ -885,8 +1096,6 @@ footer {
     font-weight: 600;
   }
 
-  /*Para Contenedor Index 3*/
-
   .texto-index-3 {
     width: 100%;
   }
@@ -895,16 +1104,91 @@ footer {
     display: none;
   }
 
-/*NOSOTROS*/
+  /*SERVICIOS*/
+  .secciones {
+    height: auto;
+  }
 
+  .seccion-izq {
+    width: 65%;
+    height: 85vh;
+    gap: 5px;
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+
+  .seccion-der {
+      width: 35%;
+      height: 85vh;
+      padding-left: 3%;
+      padding-right: 2%;
+  }
+
+  .seccion-der h1 {
+    font-size: 1.2rem;
+    line-height: 1.7rem;
+  }
+
+  .seccion-izq h1 {
+      font-size: 3rem;
+      line-height: 3.5rem;
+  }
+
+  .seccion-izq p {
+      font-size: 1.2rem;
+      line-height: 1.7;
+  }
+
+  .line {
+      width: 70%;
+  }
+
+  .lista-servicios {
+    flex-direction: column;
+      padding: 10px 0;
+      height: auto;
+  }
+
+  .lista-servicios button {
+      padding: 5px;
+      font-size: 1.4rem;
+  }
+  
+/*NOSOTROS*/
 .panel-principal {
   width: 100%;
   right:-100%;
-  background-image: url(/Assets/Images/Pilares.jpg);
   background-size: cover;
   background-position: center;
 }
 
+#panel-bg-1 {
+  background-image: url(/Assets/Images/Pilares.jpg);
+}
+
+#panel-bg-2 {
+  background-image: url(/Assets/Images/Vision.jpg);
+}
+
+#panel-bg-3 {
+  background-image: url(/Assets/Images/Mision.jpg);
+}
+
+#panel-bg-4 {
+  background-image: url(/Assets/Images/Valores.jpg);
+}
+
+.titulo-contenido {
+  font-size: 3rem;
+}
+
+.subtitulos-contenido {
+  font-size: 2.5rem;
+}
+
+.nosotros-parrafo {
+  font-size: 1.7;
+}
 
 /*HISTORIA*/
   .texto-historia-1 {
@@ -936,7 +1220,6 @@ footer {
     width: 175px
   }
 
-
   /*CONTACTO*/
   .contenedor-contacto {
     flex-direction: column;
@@ -960,229 +1243,5 @@ footer {
 }
 
 
-/*Fin boton de seccion*/
-/* Fin seccion Header - CODIGO DE PABLO*/
-
-/* Seccion Servicios  - CODIGO DE SEBA *
-
-/* segunda parte de la pagina */
-.info-servicios {
-  padding: 2rem; 
-  text-align: center;
-  background-color: #eaeaea;
-  height: auto;
-  margin: 0;
-  padding: 0;
-}
-
-/* navbar de los servicios disponibles */
-.lista-servicios {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  height: 10vh;
-  width: 100vw;
-  padding: 0;
-  margin: 0;
-  background-color: #E5E5E5;
-}
-
-.lista-servicios button {
-  font-family: 'Satoshi', sans-serif;
-  color: black;
-  border: none;
-  font-size: 2rem;
-  cursor: pointer;
-  background-color: #E5E5E5;
-}
-
-.lista-servicios button:hover {
-  font-weight: bold;
-  background-color: transparent;
-}
-
-.lista-servicios button.active {
-  font-weight: bold;
-  background-color: transparent;
-}
-
-/* secciones de la pagina */
-.secciones {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-items: stretch;
-  width: 100%;
-  height: auto;
-}
-
-/* seccion izquierda */
-.seccion-izq {
-  display: flex;
-  flex: 1;
-  width: 50%;
-  height: 90vh;
-  flex-direction: column;
-  justify-content: center;
-  position: relative;
-  overflow: hidden; 
-  z-index: 1;
-}
-
-/* imagen de fondo de la seccion izquierda */
-.bg-img-izq {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url('/Assets/Images/izq_placeholder.jpg'); /* Ruta de la imagen */
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-blend-mode: difference;
-  filter: brightness(0.5);
-  z-index: -1;
-}
-
-.seccion-izq h1 {
-  font-family: 'Satoshi', sans-serif;
-  font-size: 6rem;
-  text-align: start;
-  margin-left: 25%;
-  margin-right: 25%;
-  color: white;
-}
-
-.line {
-  height: 1px;
-  width: 36rem;
-  background-color: white;
-  margin-left: 25%;
-  margin-right: 25%;
-  margin-top: 0.6rem;
-  margin-bottom: 0.7rem;
-}
-
-.seccion-izq p {
-  font-family: 'work-sans', sans-serif;
-  font-size: 2rem;
-  margin-left: 25%;
-  margin-right: 20%;
-  line-height: 1.6;
-  text-align: start;
-  color: white;
-}
-
-/* seccion derecha */
-.seccion-der {
-  flex: 1;
-  display: flex;
-  width: 50%;
-  height: 90vh;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  font-size: 1.5rem;
-  font-family: 'Satoshi', sans-serif;
-  position: relative;
-  overflow: hidden; 
-  z-index: 1;
-}
-
-.content-block {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-}
-
-
-@media only screen and (max-width: 1100px) {
-  .seccion-izq {
-    width: 65%;
-    flex: 0 0 65%;
-    padding: 30px;
-  }
-
-  .seccion-der {
-      width: 35%;
-      flex: 0 0 35%;
-      padding: 30px;
-  }
-
-  .seccion-izq h1 {
-      font-size: 5.2rem;
-      margin: 15px 10%;
-  }
-
-  .seccion-izq p {
-      font-size: 2rem;
-      margin: 10px 10%;
-      line-height: 1.5;
-  }
-
-  .line {
-      width: 35rem;
-      margin: 10px 10%;
-  }
-
-  .lista-servicios {
-      height: auto;
-      padding: 15px 0;
-  }
-
-  .lista-servicios button {
-      font-size: 2rem;
-      padding: 10px;
-  }
-}
-
-
-@media only screen and (max-width: 750px) {
-
- 
-
-  /*SECCION SERVICIOS RESPONSIVA */
-  .secciones {
-    min-height: 100vh;
-  }
-
-  .seccion-izq {
-    width: 65%;
-    flex: 0 0 65%;
-    padding: 20px;
-  }
-
-  .seccion-der {
-      width: 35%;
-      flex: 0 0 35%;
-      padding: 20px; 
-  }
-
-  .seccion-izq h1 {
-      font-size: 5rem;
-      margin: 15px 15%;
-  }
-
-  .seccion-izq p {
-      font-size: 1.8rem;
-      margin: 10px 15%;
-      line-height: 1.4;
-  }
-
-  .line {
-      width: 70%;
-      margin: 10px 15%;
-  }
-
-  .lista-servicios {
-      padding: 10px 0;
-      height: auto;
-  }
-
-  .lista-servicios button {
-      padding: 10px;
-      font-size: 1.6rem;
-  }
-}
+  
 

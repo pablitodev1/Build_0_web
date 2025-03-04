@@ -3,8 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Esto es un link para fontawesome, biblioteca de iconos-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!--Link a fontshare para tipografia SATOSHI-->
     <link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,301,400,401,500,501,700,701,900,901&display=swap" rel="stylesheet">
@@ -22,7 +20,7 @@
 
      <!--AOS Library / animaciones basicas-->
      <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
-
+     <link rel="icon" type="image/png" href="/Assets/Images/favicon.png"/>
     <title>Balada Consultores, consultora boutique</title>
 </head>
 <body>
@@ -69,53 +67,86 @@
         </div>
    
     <div class="btn-container">   
-        <a href="#nosotros-1" class="down-btn">
+        <a href="#pilares" class="down-btn">
             <img src="/Assets/Images/Flecha_Down.png" alt="Flecha indicando para lado inferior de la pagina">
         </a> 
     </div> 
         
     </header>
 
-
-    <div class="contenedor-nosotros-1" id="nosotros-1">
+    <div class="contenedor-nosotros" id="pilares">
         <div class="contenido-principal">
             <h2 class="titulo-contenido" data-aos="fade-down" data-aos-delay="100">PILARES</h2>
             <h3 class="subtitulos-contenido" data-aos="fade-down" data-aos-delay="200">Confianza</h3>
             <h3 class="subtitulos-contenido" data-aos="fade-down" data-aos-delay="300">Experiencia</h3>
             <h3 class="subtitulos-contenido" data-aos="fade-down" data-aos-delay="400">Confidencialidad</h3>
-            <button id="boton-abrir" data-aos="fade-down" data-aos-delay="500">Ver más</button>
+            <button class="boton-abrir" data-aos="fade-down" data-aos-delay="500">Ver más</button>
         </div>
         
-        <div class="panel-principal">
+        <div class="panel-principal" id="panel-bg-1">
             <p class="nosotros-parrafo">En nuestra empresa, la Confianza, Experiencia y Confidencialidad son pilares que rigen cada una de nuestras acciones. Nos enfocamos en construir relaciones profesionales y transparentes con nuestros clientes, respaldados por décadas de trayectoria y un compromiso absoluto con la seguridad de su información.</p>
-            <button id="boton-cerrar">Cerrar</button>
+            <button class="boton-cerrar">Cerrar</button>
         </div>
     </div>
-   
-   
-   <script>
-    //Script JS para menu responsivo, se mantiene en body para evitar conflictos con JS linkeado//
-    const burger = document.querySelector(".burger");
-    const navMenu = document.querySelector(".nav-menu");
 
-        burger.addEventListener("click", mobileMenu);
+     <div class="contenedor-nosotros" id="vision">
+        <div class="contenido-principal">
+            <h2 class="titulo-contenido" data-aos="fade-down" data-aos-delay="100">VISIÓN</h2>
+            <h3 class="subtitulos-contenido" data-aos="fade-down" data-aos-delay="200">Empresa líder en<br>asesoría integral</h3>
+            <h3 class="subtitulos-contenido" data-aos="fade-down" data-aos-delay="300">Clientes con desarrollo global</h3>
+            <h3 class="subtitulos-contenido" data-aos="fade-down" data-aos-delay="400">Necesidades específicas,<br> soluciones completas</h3>
+            <button class="boton-abrir" data-aos="fade-down" data-aos-delay="500">Ver más</button>
+        </div>
+        
+        <div class="panel-principal" id="panel-bg-2">
+            <p class="nosotros-parrafo">Posicionarnos como una empresa líder en asesoría integral, destacándonos por nuestra capacidad para transformar necesidades específicas en soluciones completas que impulsen el desarrollo personal y empresarial de nuestros clientes, tanto a nivel nacional como internacional.</p>
+            <button class="boton-cerrar">Cerrar</button>
+        </div>
+    </div>
 
-    function mobileMenu() {
-        burger.classList.toggle("active");
-        navMenu.classList.toggle("active"); 
-    }
+    <div class="contenedor-nosotros" id="mision">
+        <div class="contenido-principal">
+            <h2 class="titulo-contenido" data-aos="fade-down" data-aos-delay="100">MISIÓN</h2>
+            <h3 class="subtitulos-contenido" data-aos="fade-down" data-aos-delay="200">Solucione estratégicas</h3>
+            <h3 class="subtitulos-contenido" data-aos="fade-down" data-aos-delay="300">Todo en un solo lugar</h3>
+            <button class="boton-abrir" data-aos="fade-down" data-aos-delay="400">Ver más</button>
+        </div>
+        
+        <div class="panel-principal" id="panel-bg-3">
+            <p class="nosotros-parrafo">Brindar asesoría integral, ofreciendo soluciones estratégicas y personalizadas que permitan a nuestros clientes resolver todas sus necesidades en un solo lugar.</p>
+            <button class="boton-cerrar">Cerrar</button>
+        </div>
+    </div>
 
-    // Al cliquear la X se cierra icono hamburguesa
+    <div class="contenedor-nosotros" id="nuestros-valores">
+        <div class="contenido-principal">
+            <h2 class="titulo-contenido" data-aos="fade-down" data-aos-delay="100">NUESTROS VALORES</h2>
+            <h3 class="subtitulos-contenido" data-aos="fade-down" data-aos-delay="200">Las empresas son una fuente de<br>innovación efectiva y global</h3>
+            <h3 class="subtitulos-contenido" data-aos="fade-down" data-aos-delay="300">Apoyamos a los empresarios que<br>contribuyen al bienestar de la<br>comunidad</h3>
+            <button class="boton-abrir" data-aos="fade-down" data-aos-delay="400">Ver más</button>
+        </div>
+        
+        <div class="panel-principal" id="panel-bg-4">
+            <p class="nosotros-parrafo">Brindar asesoría integral, ofreciendo soluciones estratégicas y personalizadas que permitan a nuestros clientes resolver todas sus necesidades en un solo lugar.</p>
+            <button class="boton-cerrar">Cerrar</button>
+        </div>
+    </div>
+     
+    <footer>
+        <img src="/Assets/Images/logo_balada_negro.png" alt="Logo de Balada Consultores" class="logo-footer">
 
-    const navLink = document.querySelectorAll(".nav-link");
-
-        navLink.forEach(n => n.addEventListener("click", closeMenu));
-
-    function closeMenu() {
-        burger.classList.remove("active");
-        navMenu.classList.remove("active");
-    }
-   </script>
+        <div class="contenedor-info-footer">
+            <ul class="contenedor-lista-footer">
+                <li>Av. Apoquindo 2930 piso 9, Las condes, Santiago</li>
+                <li>|</li>
+                <li class="whatsapp-footer"><img src="/Assets/Images/WhatsApp.png" alt="logo whatsapp"><p>+569 7516 7649</p></li>
+                <li>|</li>
+                <li>contacto@baladaglobal.com</li>
+                <li>|</li>
+                <li>código postal: 7550202</li>
+            </ul>
+        </div>
+    </footer>
 
    <!--Inicia AOS-->
    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
