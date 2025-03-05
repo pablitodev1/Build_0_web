@@ -608,7 +608,7 @@ footer {
   justify-content: center;
   align-items: center;
   text-align: center;
-  gap: 35px;
+  gap: 45px;
   transition: width 0.5s ease;
   background-color: rgba(255, 255, 255, 0.7);
 }
@@ -636,7 +636,7 @@ footer {
 
 .titulo-contenido {
   font-family: 'Satoshi', sans-serif;
-  font-size: 5rem;
+  font-size: 4rem;
   text-decoration: underline;
   text-decoration-thickness: 2px;
   text-underline-offset: 5px;
@@ -644,8 +644,8 @@ footer {
 
 .subtitulos-contenido {
   font-family: 'Satoshi', sans-serif;
-  font-size: 3.5rem;
-  line-height: 4rem;
+  font-size: 3rem;
+  line-height: 3.5rem;
   font-weight: 400;
 }
 
