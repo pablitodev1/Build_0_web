@@ -722,7 +722,7 @@ footer {
 
 .imagen-historia-1 {
   width: 50%;
-  background-image: url(/Assets/Images/Cartel_.jpeg);
+  background-image: url(/Assets/Images/cartel_historia_recepcion.jpg);
   background-position: center;
   background-size: cover;
 }
@@ -1202,6 +1202,7 @@ footer {
 
 .subtitulos-contenido {
   font-size: 2.5rem;
+  line-height: 3rem;
 }
 
 .nosotros-parrafo {
