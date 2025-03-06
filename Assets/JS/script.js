@@ -19,7 +19,6 @@
         navMenu.classList.remove("active");
     }
  
-
  //Slide-in NOSOTROS
   document.addEventListener('DOMContentLoaded', () => {
 
@@ -34,7 +33,7 @@
         panel.style.transform = 'translateX(-100%)'; 
       }
   
-      // Check if the clicked element is a closeButton
+      
       if (event.target.classList.contains('boton-cerrar')) {
         const container = event.target.closest('.contenedor-nosotros');
         const content = container.querySelector('.contenido-principal');
