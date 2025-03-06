@@ -73,11 +73,11 @@
    
   <!-- Listado de servicios -->
     <div class="lista-servicios" id="lista-servicios">
-        <button class="tablinks" data-tab="tax" onclick="openSection(event,1)" id="defaultOpen">Tax Planning</button>
-        <button class="tablinks" data-tab="estrategia" onclick="openSection(event,2)">Estrategia y Finanzas</button>
-        <button class="tablinks" data-tab="legal" onclick="openSection(event,3)">Legal Corporativo</button>
-        <button class="tablinks" data-tab="defensa" onclick="openSection(event,4)">Defensa Judicial y Tributaria</button>
-        <button class="tablinks" data-tab="contabilidad" onclick="openSection(event,5)">Contabilidad</button>
+        <button class="tablinks" data-tab="tax"  id="defaultOpen">Tax Planning</button>
+        <button class="tablinks" data-tab="estrategia">Estrategia y Finanzas</button>
+        <button class="tablinks" data-tab="legal">Legal Corporativo</button>
+        <button class="tablinks" data-tab="defensa">Defensa Judicial y Tributaria</button>
+        <button class="tablinks" data-tab="contabilidad">Contabilidad</button>
     </div>
     <!-- Contenedor de información de servicios -->
     <div class="info-servicios" id="info-servicios">
@@ -218,41 +218,78 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
 
-    $(document).ready(function(){
-
+$(document).ready(function() {
+    // Variable para controlar el estado de cambio de pestañas
     let switching = true;
+    // Pestaña predeterminada que se abrirá al cargar la página
     const defaultOpen = "tax";
 
+    // Ocultar todas las secciones al inicio
     $(".secciones").hide();
 
-    $("button[data-tab='" + defaultOpen + "']").addClass("active");
-    $("div[data-tab='" + defaultOpen + "']").fadeIn(400, function(){
-        $(this).addClass("active");
-        switching = false;
-    });
+    // Manejar el hash en la URL y simular clic en el botón correspondiente
+    const hash = window.location.hash.substring(1); // Obtener el hash sin el '#'
+    if (hash) {
+        const button = $(`button[data-tab='${hash}']`);
+        if (button.length) {
+            // Marcar el botón correspondiente al hash como activo
+            button.addClass("active");
+            // Mostrar la sección correspondiente al hash
+            $(`div[data-tab='${hash}']`).fadeIn(400, function() {
+                $(this).addClass("active");
+                switching = false; // Permitir cambios de pestañas después de abrir la pestaña correspondiente al hash
+            });
+            // Hacer scroll a #lista-servicios
+            $('html, body').animate({
+                scrollTop: $("#lista-servicios").offset().top
+            }, 100);
+        } else {
+            // Si no se encuentra el botón correspondiente al hash, mostrar la pestaña predeterminada
+            showDefaultTab();
+        }
+    } else {
+        // Si no hay hash, mostrar la pestaña predeterminada
+        showDefaultTab();
+    }
 
-    $(".tablinks").click(function(){
+    // Función para mostrar la pestaña predeterminada
+    function showDefaultTab() {
+        $("button[data-tab='" + defaultOpen + "']").addClass("active");
+        $("div[data-tab='" + defaultOpen + "']").fadeIn(400, function() {
+            $(this).addClass("active");
+            switching = false; // Permitir cambios de pestañas después de abrir la predeterminada
+        });
+    }
+
+    // Manejar clics en los botones de las pestañas
+    $(".tablinks").click(function() {
+        // Obtener el atributo data-tab del botón clicado
         const switchToAttr = $(this).attr("data-tab");
+        // Obtener la sección correspondiente a la pestaña clicada
         const switchTo = $("div[data-tab='" + switchToAttr + "']");
+        // Obtener la sección actualmente activa
         const prevDiv = $(".secciones.active");
 
-        if(!switching && switchToAttr != prevDiv.attr("data-tab")){
-            switching = true;
+        // Verificar si no se está cambiando de pestaña y si la pestaña clicada es diferente a la actual
+        if (!switching && switchToAttr != prevDiv.attr("data-tab")) {
+            switching = true; // Bloquear cambios de pestañas mientras se realiza el cambio
 
+            // Desmarcar el botón y la sección activos
             $("button.active").removeClass("active");
             prevDiv.removeClass("active");
 
+            // Marcar el nuevo botón y la nueva sección como activos
             $(this).addClass("active");
             switchTo.addClass("active");
 
-            prevDiv.fadeOut(400, function(){
+            // Ocultar la sección anterior y mostrar la nueva
+            prevDiv.fadeOut(400, function() {
                 switchTo.fadeIn(400);
-                switching = false;
+                switching = false; // Permitir nuevos cambios de pestañas después de completar el cambio
             });
         }
     });
-
-    });
+});
 
     </script>
 
