@@ -38,7 +38,7 @@ header {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: url(/Assets/Images/Header_BG_60_v2.jpg) center/cover no-repeat;
+  background: url(Assets/Images/Header_BG_60_v2.jpg) center/cover no-repeat;
   animation: zoomBackground 50s ease;
   animation-iteration-count: infinite;
   z-index: -1; 
@@ -306,7 +306,7 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url(/Assets/Images/Foto_Interior_Reunion.jpg);
+  background-image: url(Assets/Images/Foto_Interior_Reunion.jpg);
   background-position: center;
   background-size: cover;
   overflow: hidden;
@@ -408,7 +408,7 @@ footer {
 
 .imagen-index-3 {
   width: 50%;
-  background-image: url(/Assets/Images/JIB_pel-v3.png);
+  background-image: url(Assets/Images/JIB_pel-v3.png);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -486,35 +486,35 @@ footer {
 }
 
 #bg-1 {
-  background-image: url(/Assets/Images/izq_placeholder.jpg);
+  background-image: url(Assets/Images/izq_placeholder.jpg);
 }
 
 #bg-2 {
-  background-image: url(/Assets/Images/izq_placeholder.jpg);
+  background-image: url(Assets/Images/izq_placeholder.jpg);
 }
 
 #bg-3 {
-  background-image: url(/Assets/Images/izq_placeholder.jpg);
+  background-image: url(Assets/Images/izq_placeholder.jpg);
 }
 
 #bg-4 {
-  background-image: url(/Assets/Images/izq_placeholder.jpg);
+  background-image: url(Assets/Images/izq_placeholder.jpg);
 }
 
 #bg-5 {
-  background-image: url(/Assets/Images/izq_placeholder.jpg);
+  background-image: url(Assets/Images/izq_placeholder.jpg);
 }
 
 #bg-6 {
-  background-image: url(/Assets/Images/izq_placeholder.jpg);
+  background-image: url(Assets/Images/izq_placeholder.jpg);
 }
 
 #bg-7 {
-  background-image: url(/Assets/Images/izq_placeholder.jpg);
+  background-image: url(Assets/Images/izq_placeholder.jpg);
 }
 
 #bg-8 {
-  background-image: url(/Assets/Images/izq_placeholder.jpg);
+  background-image: url(Assets/Images/izq_placeholder.jpg);
 }
 
 .seccion-izq h1 {
@@ -577,25 +577,25 @@ footer {
 }
 
 #pilares {
-  background-image: url(/Assets/Images/Pilares.jpg);
+  background-image: url(Assets/Images/Pilares.jpg);
   background-size: cover;
   background-position: center;
 }
 
 #vision {
-  background-image: url(/Assets/Images/Vision.jpg);
+  background-image: url(Assets/Images/Vision.jpg);
   background-size: cover;
   background-position: center;
 }
 
 #mision {
-  background-image: url(/Assets/Images/Mision.jpg);
+  background-image: url(Assets/Images/Mision.jpg);
   background-size: cover;
   background-position: center;
 }
 
 #nuestros-valores {
-  background-image: url(/Assets/Images/Valores.jpg);
+  background-image: url(Assets/Images/Valores.jpg);
   background-size: cover;
   background-position: center;
 }
@@ -722,7 +722,7 @@ footer {
 
 .imagen-historia-1 {
   width: 50%;
-  background-image: url(/Assets/Images/cartel_historia_recepcion.jpg);
+  background-image: url(Assets/Images/cartel_historia_recepcion.jpg);
   background-position: center;
   background-size: cover;
 }
@@ -751,7 +751,7 @@ footer {
 .imagen-historia-2 {
   width:  300px;
   height: 550px;
-  background-image: url(/Assets/Images/JoseSoler.jpg);
+  background-image: url(Assets/Images/JoseSoler.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1096,7 +1096,7 @@ footer {
 
   .servicios-index-2 {
     width: 100%;
-    background-image: url(/Assets/Images/Foto_Interior_Reunion.jpg);
+    background-image: url(Assets/Images/Foto_Interior_Reunion.jpg);
     background-position: center;
     background-size: cover;
   }
@@ -1181,19 +1181,19 @@ footer {
 }
 
 #panel-bg-1 {
-  background-image: url(/Assets/Images/Pilares.jpg);
+  background-image: url(Assets/Images/Pilares.jpg);
 }
 
 #panel-bg-2 {
-  background-image: url(/Assets/Images/Vision.jpg);
+  background-image: url(Assets/Images/Vision.jpg);
 }
 
 #panel-bg-3 {
-  background-image: url(/Assets/Images/Mision.jpg);
+  background-image: url(Assets/Images/Mision.jpg);
 }
 
 #panel-bg-4 {
-  background-image: url(/Assets/Images/Valores.jpg);
+  background-image: url(Assets/Images/Valores.jpg);
 }
 
 .titulo-contenido {
