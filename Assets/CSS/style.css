@@ -486,36 +486,33 @@ footer {
 }
 
 #bg-1 {
-  background-image: url(../Images/izq_placeholder.jpg);
+  background-image: url(../Images/Foto_Interior_Reunion.jpg);
 }
 
 #bg-2 {
-  background-image: url(../Images/izq_placeholder.jpg);
+  background-image: url(../Images/estrategia_corporativa.jpg);
 }
 
 #bg-3 {
-  background-image: url(../Images/izq_placeholder.jpg);
+  background-image: url(../Images/estrategia_financiera.jpg);
 }
 
 #bg-4 {
-  background-image: url(../Images/izq_placeholder.jpg);
+  background-image: url(../Images/finanzas.jpg);
 }
 
 #bg-5 {
-  background-image: url(../Images/izq_placeholder.jpg);
+  background-image: url(../Images/legal_corporativo.jpg);
 }
 
 #bg-6 {
-  background-image: url(../Images/izq_placeholder.jpg);
+  background-image: url(../Images/defensa_judicial.jpg);
 }
 
 #bg-7 {
-  background-image: url(../Images/izq_placeholder.jpg);
+  background-image: url(../Images/contabilidad.jpg);
 }
 
-#bg-8 {
-  background-image: url(../Images/izq_placeholder.jpg);
-}
 
 .seccion-izq h1 {
   font-family: 'Satoshi', sans-serif;
