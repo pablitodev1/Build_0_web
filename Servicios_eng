@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Link a fontshare para tipografia SATOSHI-->
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,301,400,401,500,501,700,701,900,901&display=swap" rel="stylesheet">
+
+    <!--Link a google fonts/api para tipografiia WORK SANS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!--Link CSS-->
+    <link rel="stylesheet" href="Assets/CSS/style.css">
+
+    <!--Link JS-->
+    <script src="Assets/JS/script.js" defer></script>
+    <link rel="icon" type="image/png" href="Assets/Images/favicon.png"/>
+    <title>Balada Consultores, boutique consulting firm</title>
+</head>
+
+<body>
+    <header>
+
+        <div class="header-bg"></div> <!-- esto es la imagen BG del header, reemplazable en el CSS-->
+
+    <nav class="navbar">
+        
+        <a href="index.html" class="logo-navbar"><img src="Assets/Images/logo_balada_blanco.png" alt="Logo Balada"></a>
+
+        <ul class="nav-menu">
+            <li class="nav-item">
+                <a href="index_eng.html" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+                <a href="Servicios.html" class="nav-link">Services</a>
+            </li>
+            <li class="nav-item">
+                <a href="Nosotros.html" class="nav-link">Us</a>
+            </li>
+            <li class="nav-item">
+                <a href="Historia.html" class="nav-link">History</a>
+            </li>
+            <li class="nav-item">
+                <a href="Contacto.html" class="nav-link">Contact</a>
+            </li>
+        </ul>
+
+        <div class="filler-navbar"></div>
+
+        <div class="burger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
+    </nav>
+        <div class="Indicador-seccion">
+            <h1 class="Titulo-seccion">Services</h1>
+            <div class="Linea"></div>
+            <p class="Subtitulo-seccion">Our areas of expertise</p>
+        </div>
+   
+    <div class="btn-container">   
+        <a href="#lista-servicios" class="down-btn">
+            <img src="Assets/Images/Flecha_Down.png" alt="Flecha indicando para lado inferior de la pagina">
+        </a> 
+    </div> 
+        
+    </header>   
+   
+  <!-- Listado de servicios -->
+  <div class="lista-servicios" id="lista-servicios">
+    <button class="tablinks" data-tab="tax"  id="defaultOpen">Tax Planning</button>
+    <button class="tablinks" data-tab="estrategia">Strategy and Finance</button>
+    <button class="tablinks" data-tab="legal">Corporate Legal</button>
+    <button class="tablinks" data-tab="defensa">Legal and Tax Defense</button>
+    <button class="tablinks" data-tab="contabilidad">Accounting</button>
+</div>
+<!-- Contenedor de información de servicios -->
+<div class="info-servicios" id="info-servicios">
+    <!-- Secciones de cada listado -->
+    <!-- Tax Planning -->
+    <div class="secciones" id="1" data-tab="tax">
+        <div class="seccion-izq" id="bg-1">
+            <h1>Tax Planning</h1>
+            <div class="line"></div>
+            <p>
+                For us tax planning is not limited to the mere management of tax obligations: it implies the profesional preparation of a strategic, calculated and creative plan.
+                 <br><br>
+                 With a trayectory of more than 80 years, our team designs personalized solutions that include corporate restructuring, succession planning and investment vehicles abroad, all under a rigurous legal framework. Our goal is to comprehend each scenario deeply in order to create efficient strategies, without losing sight of growth and stability objectives. 
+                We think of each solution as a tailor made suit.
+            </p>
+        </div>
+
+        <div class="seccion-der">
+            <h1>Corporate Restructuring</h1>
+            <h1>Succession Planning</h1>
+            <h1>Investment Vehicles Abroad</h1>
+            <h1>Tailor made Tax Solutions</h1>
+        </div>
+    </div>
+
+    <!-- Estrategia y finanzas -->
+    <div class="secciones" id="2" style="flex-direction: column;" data-tab="estrategia">
+        <div class="content-block">
+            <div class="seccion-izq" id="bg-2">
+                <h1>Corporate Strategy</h1>
+                <div class="line"></div>
+                <p>El crecimiento sostenible de una empresa no ocurre por azar: es el resultado de decisiones estratégicas bien fundamentadas. <br><br>Con más de 80 años de experiencia, ayudamos a estructurar modelos de negocio sólidos, optimizar la gobernanza y anticipar escenarios clave para la toma de decisiones. Analizamos cada contexto con profundidad, diseñando estrategias adaptadas que permitan a las empresas evolucionar con seguridad y competitividad.</p>
+            </div>
+
+            <div class="seccion-der">
+                <h1>Reestrucuración Corporativa</h1>
+                <h1>Planificación de Agenda de Crecimiento y Desarrollo</h1>
+                <h1>Gobierno Corporativo</h1>
+                <h1>ESG</h1>
+                <h1><i>Compliance</i></h1>
+                <h1>Control de Gestión</h1>
+                <h1>Asesoría Estratégica General</h1>
+            </div>
+        </div>
+        <div class="content-block">
+            <div class="seccion-izq">
+                <h1 style="color: black;">Strategy and Finance Services</h1>
+                <div class="line" style="background-color: black;"></div>
+                <p style="color: black;">Una planificación financiera efectiva no solo protege el presente, sino que también traza el camino hacia el futuro. <br><br> Desde la optimización de estructuras de capital hasta el diseño de estrategias de financiamiento, nuestro equipo aporta soluciones que equilibran crecimiento, rentabilidad y control de riesgos. Nuestra experiencia nos permite analizar cada caso con visión estratégica, asegurando decisiones financieras alineadas con los objetivos y la estabilidad de nuestros clientes.</p>
+            </div>
+
+            <div class="seccion-der" id="bg-3" style="color: white;">
+                <h1>Reestructuración Financiera</h1>
+                <h1>Optimización Capital de Trabajo (Working Capital)</h1>
+                <h1>Riesgo financiero</h1>
+                <h1><i>Investor Relations</i></h1>
+                <h1>Tesorería</h1>
+                <h1><i>Portfolio Manager</i> y Control de Inversiones</h1>
+                <h1>Negociación de Adquisiciones y Ventas de Empresas, Activos, Negociación de Contratos, LOI, SPA, NDA, MOU, etc. (<i>M&A</i>)</h1>
+                <h1>Asociaciones, Búsqueda de Socio Estratégico y <i>Joint Venture</i></h1>
+                <h1>Evaluación de Proyectos</h1>
+            </div>
+        </div>
+        <!--
+        <div class="content-block">
+            <div class="seccion-izq" id="bg-4">
+                <h1>Finanzas</h1>
+                <div class="line"></div>
+                <p>En un entorno donde cada decisión económica impacta en la estabilidad y el crecimiento, un enfoque financiero riguroso es clave. <br><br>Acompañamos a nuestros clientes en la gestión de activos, evaluación de inversiones y optimización de estructuras de costos, siempre con un análisis preciso y orientado a la eficiencia. Nuestra visión no se limita a los números: buscamos generar valor real a largo plazo, asegurando soluciones sostenibles y alineadas con cada necesidad.</p>
+            </div>
+
+            <div class="seccion-der">
+                <h1>Financiamiento y refinanciamiento</h1>
+                <h1>M&A</h1>
+                <h1>Evaluación de proyectos</h1>
+                <h1>Otros (FIP)</h1>
+            </div>
+        </div> -->
+    </div>
+
+    <!-- Legal Corporativo -->
+    <div class="secciones" id="3" data-tab="legal">
+        <div class="seccion-izq" id="bg-5">
+            <h1>Corporate Legal</h1>
+            <div class="line"></div>
+            <p>Entendemos que las necesidades legales de nuestros clientes pueden ser tan variadas como sus objetivos. <br><br>Además de atender requerimientos específicos, estamos preparados para abordar situaciones adicionales o imprevistas, ofreciendo un servicio integral que cubre incluso las áreas más inesperadas. Nuestra amplia experiencia en materias corporativas y civiles, siempre con un enfoque tributario, nos permite brindar soluciones precisas y completas.</p>
+        </div>
+
+        <div class="seccion-der">
+            <h1>Reorganización Societaria y Empresarial</h1>
+            <h1>Fideicomisos</h1>
+            <h1>Aplicaciones del Derecho Comercial y Corporativo</h1>
+            <h1>Fusiones, Divisiones y Adquisiciones</h1>
+            <h1>Acompañamiento Legal de Negociaciones (LOI, SPA, NDA, MOU)</h1>
+            <h1>Contratos Innominados ajustados al caso</h1>
+            <h1>Asesoría Legal Empresarial a la medida</h1>
+        </div>
+    </div>
+
+    <!-- Defensa judicial y tributaria -->
+    <div class="secciones" id="4" data-tab="defensa">
+        <div class="seccion-izq" id="bg-6">
+            <h1>Legal and Tax Defense</h1>
+            <div class="line"></div>
+            <p>Las complejidades del sistema tributario pueden causar desafíos legales y administrativos, que requiere de representación experta y diligente. <br><br>En Balada ofrecemos una defensa integral, que incluye la atención de citaciones, observaciones y reclamos tributarios, así como el diseño de planes para enfrentar fiscalizaciones como RAV y RAF. Nuestro enfoque se basa en una combinación de análisis detallado, conocimiento normativo y experiencia práctica para proteger los intereses de nuestros clientes.
+            </p>
+        </div>
+
+        <div class="seccion-der">
+            <h1>Juicios Civiles</h1>
+            <h1>Juicios Tributarios</h1>
+            <h1>RAV y RAF</h1>
+            <h1>Defensa Tributaria</h1>
+            <h1>Defensoría del Contribuyente</h1>
+            <h1>Recursos de Resguardo</h1>
+        </div>
+    </div>
+
+    <!-- Contabilidad -->
+    <div class="secciones" id="5" data-tab="contabilidad">
+        <div class="seccion-izq" id="bg-7">
+            <h1>Accounting</h1>
+            <div class="line"></div>
+            <p>Desde nuestros inicios, la contabilidad ha sido un área fundamental de nuestro trabajo, asesorando a cada cliente con un servicio íntegro que garantiza la correcta gestión de recursos. Midiendo, registrando e informando los hechos económicos ocurridos en empresas. <br><br>Hoy, integramos estas soluciones en una propuesta más amplia, complementando nuestro enfoque en eficiencia tributaria, asegurando el cumplimiento fiscal y optimizando procesos financieros. Nuestro equipo se encarga de llevar a cabo la contabilidad, auditorías, declaración de renta, gestión tributaria entre otros.</p>
+        </div>
+
+        <div class="seccion-der">
+            <h1>Declaración de Renta</h1>
+            <h1>Cierres Tributarios / Contables</h1>
+            <h1>Contabilidad</h1>
+            <h1>Auditorías</h1>
+            <h1>Gestión Tributaria</h1>
+            <h1>Soluciones Contables a la medida</h1>
+        </div>
+    </div>
+</div>
+    
+     <footer>
+        <img src="Assets/Images/logo_balada_negro.png" alt="Logo de Balada Consultores" class="logo-footer">
+
+        <div class="contenedor-info-footer">
+            <ul class="contenedor-lista-footer">
+                <li>Av. Apoquindo 2930 9th floor, Las condes, Santiago</li>
+                <li>|</li>
+                 <li class="whatsapp-footer"><img src="Assets/Images/WhatsApp.png" alt="logo whatsapp"><p>+569 7516 7649</p></li>
+                <li>|</li>
+                <li>contacto@baladaglobal.com</li>
+                <li>|</li>
+                <li>zip code: 7550202</li>
+            </ul>
+        </div>
+
+    </footer>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+
+        $(document).ready(function() {
+            // Variable para controlar el estado de cambio de pestañas
+            let switching = true;
+            // Pestaña predeterminada que se abrirá al cargar la página
+            const defaultOpen = "tax";
+        
+            // Ocultar todas las secciones al inicio
+            $(".secciones").hide();
+        
+            // Manejar el hash en la URL y simular clic en el botón correspondiente
+            const hash = window.location.hash.substring(1); // Obtener el hash sin el '#'
+            if (hash) {
+                const button = $(`button[data-tab='${hash}']`);
+                if (button.length) {
+                    // Marcar el botón correspondiente al hash como activo
+                    button.addClass("active");
+                    // Mostrar la sección correspondiente al hash
+                    $(`div[data-tab='${hash}']`).fadeIn(400, function() {
+                        $(this).addClass("active");
+                        switching = false; // Permitir cambios de pestañas después de abrir la pestaña correspondiente al hash
+                    });
+                    // Hacer scroll a #lista-servicios
+                    $('html, body').animate({
+                        scrollTop: $("#lista-servicios").offset().top
+                    }, 100);
+                } else {
+                    // Si no se encuentra el botón correspondiente al hash, mostrar la pestaña predeterminada
+                    showDefaultTab();
+                }
+            } else {
+                // Si no hay hash, mostrar la pestaña predeterminada
+                showDefaultTab();
+            }
+        
+            // Función para mostrar la pestaña predeterminada
+            function showDefaultTab() {
+                $("button[data-tab='" + defaultOpen + "']").addClass("active");
+                $("div[data-tab='" + defaultOpen + "']").fadeIn(400, function() {
+                    $(this).addClass("active");
+                    switching = false; // Permitir cambios de pestañas después de abrir la predeterminada
+                });
+            }
+        
+            // Manejar clics en los botones de las pestañas
+            $(".tablinks").click(function() {
+                // Obtener el atributo data-tab del botón clicado
+                const switchToAttr = $(this).attr("data-tab");
+                // Obtener la sección correspondiente a la pestaña clicada
+                const switchTo = $("div[data-tab='" + switchToAttr + "']");
+                // Obtener la sección actualmente activa
+                const prevDiv = $(".secciones.active");
+        
+                // Verificar si no se está cambiando de pestaña y si la pestaña clicada es diferente a la actual
+                if (!switching && switchToAttr != prevDiv.attr("data-tab")) {
+                    switching = true; // Bloquear cambios de pestañas mientras se realiza el cambio
+        
+                    // Desmarcar el botón y la sección activos
+                    $("button.active").removeClass("active");
+                    prevDiv.removeClass("active");
+        
+                    // Marcar el nuevo botón y la nueva sección como activos
+                    $(this).addClass("active");
+                    switchTo.addClass("active");
+        
+                    // Ocultar la sección anterior y mostrar la nueva
+                    prevDiv.fadeOut(400, function() {
+                        switchTo.fadeIn(400);
+                        switching = false; // Permitir nuevos cambios de pestañas después de completar el cambio
+                    });
+                }
+            });
+        });
+        
+            </script>
+
+</body>
+</html>
