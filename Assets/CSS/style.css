@@ -108,7 +108,7 @@ header {
 }
 
 .icono_leng {
-  width: 2%;
+  width: auto;
 }
 
 .icono_leng img {
@@ -969,6 +969,28 @@ footer {
 @media only screen and (max-width: 750px) { /*PRIMER BREAKPOINT PARA PANTALLAS CHICAS*/
 
   /*NAVBAR HEADER*/
+ 
+  /* Los siguientes ajustes de navbar, logo-navbar, burger e icono_leng son para ajustar el posicionamiento de estos elementos en la version mobil, se justifican todos los elementos en el centro, se establece un ancho fijo de contenedor para los tres [52px] y se le agrega un margen porcentual al elemento del medio [icono_leng] para siempre mantenerlo en el centro y mantener una buena distancia entre todos los iconos, el margen porcentual ayuda a que se visualize correctamente en distintas pantallas pequenas. Icono_leng se hace flex para poder centrar la imagen sin mucho CSS extra*/
+  .navbar {
+    justify-content: center;
+  }
+
+  .logo-navbar {
+    width: 52px;
+  }
+
+  .burger {
+    width: 52px;
+  }
+
+  .icono_leng {
+    display: flex;
+    width: 52px;
+    justify-content: center;
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+
   .nav-menu {
       position: fixed;
       left: -100%;
